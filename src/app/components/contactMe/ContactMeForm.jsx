@@ -1,5 +1,7 @@
 import React from "react";
 import "./ContactMeForm.css";
+import UniversalBtn from "../buttons/UniversalBtn";
+import { TfiArrowTopRight } from "react-icons/tfi";
 
 const ContactMeForm = () => {
   return (
@@ -33,12 +35,6 @@ const ContactMeForm = () => {
                 Email
               </label>
               <input
-                style={{
-                  backgroundColor: "transparent",
-                  border: "none",
-                  borderBottom: "1px solid var(--text-color-neutral-border)",
-                  borderRadius: "0px",
-                }}
                 type="email"
                 className="form-control"
                 id="exampleFormControlInput1"
@@ -52,13 +48,24 @@ const ContactMeForm = () => {
               className="form-label"
               style={{ color: "#86869B" }}
             >
-              Example textarea
+              Your Message
             </label>
             <textarea
               className="text-area-form form-control"
               id="exampleFormControlTextarea1"
-              rows="3"
+              style={{
+                minHeight: "10px",
+                maxHeight: "300px",
+                overflowY: "auto",
+                resize: "none",
+              }}
+              // rows="3"
             ></textarea>
+          </div>
+          <div className="text-center" style={{ marginTop: "4rem" }}>
+            <UniversalBtn>
+              send Message <TfiArrowTopRight className="ms-1" />
+            </UniversalBtn>
           </div>
         </div>
       </div>

@@ -8,12 +8,15 @@
 .text-area-wrapper {
   margin-top: 2.75rem;
 }
-.form-input {
-  border: none;
+#exampleFormControlInput1,
+#exampleFormControlTextarea1 {
+  color: var(--bg-color);
   background-color: transparent;
+  border: none;
   border-bottom: 1px solid var(--text-color-neutral-border);
-  border-radius: 0px;
   box-shadow: none;
+  padding-left: 0px;
+  border-radius: 0px;
 }
 .text-area-form {
   border: none;

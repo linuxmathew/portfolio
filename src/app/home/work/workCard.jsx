@@ -5,7 +5,7 @@ const WorkCard = ({ image, title, link }) => {
     <div
       className=""
       style={{
-        padding: "60px 40px",
+        padding: "30px",
         backgroundColor: "#13132F",
         borderRadius: "24px",
       }}
