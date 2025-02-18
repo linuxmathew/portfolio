@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Hubby from "./Hubby";
 import { PiAirplaneTiltThin, PiBookOpenThin } from "react-icons/pi";
+import { motion } from "framer-motion";
 
 const OtherThings = () => {
   const arr = [
@@ -22,7 +24,7 @@ const OtherThings = () => {
   const midpoint = Math.ceil(arr.length / 2);
 
   return (
-    <div className="container-md">
+    <div className="container-md overflow-hidden">
       <p
         className="text-center"
         style={{
@@ -35,18 +37,26 @@ const OtherThings = () => {
       >
         I also love to do & talk about other things
       </p>
-      <div className="row">
-        {arr.map((ar, index) => (
-          <div className="col col-3 col-md-2 mb-5" key={index}>
-            <Hubby
-              key={`hubby-first-half${index}`}
-              hubbyText={ar.hubbyText}
-              hubbyIcon={ar.hubbyIcon}
-            />
-          </div>
-        ))}
+      <div className="relative w-full overflow-hidden">
+        <motion.div
+          className="flex gap-4 flex-nowrap"
+          initial={{ x: "100%" }} // Start from right
+          animate={{ x: "-100%" }} // Move to left
+          transition={{
+            ease: "linear",
+            duration: 30, // Adjust speed (lower = faster)
+            repeat: Infinity,
+          }}
+        >
+          {/* Duplicate array to make an infinite scroll effect */}
+          {[...arr, ...arr].map((hobby, index) => (
+            // <div key={index} className="" classNamemy-5>
+            <Hubby hubbyText={hobby.hubbyText} hubbyIcon={hobby.hubbyIcon} />
+            // </div>
+          ))}
+        </motion.div>
       </div>
-      {/* <div className="text-center" style={{ marginTop: "74px" }}>
+      <div className="text-center" style={{ marginTop: "74px" }}>
         {arr.slice(0, midpoint).map((ar, index) => (
           <Hubby
             key={`hubby-first-half${index}`}
@@ -54,7 +64,7 @@ const OtherThings = () => {
             hubbyIcon={ar.hubbyIcon}
           />
         ))}
-      </div> */}
+      </div>
       {/* <div className="text-center" style={{ marginTop: "40px" }}>
         {arr.slice(midpoint).map((ar, index) => (
           <Hubby

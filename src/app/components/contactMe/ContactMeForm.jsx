@@ -1,7 +1,8 @@
 import React from "react";
 import "./ContactMeForm.css";
 import UniversalBtn from "../buttons/UniversalBtn";
-import { TfiArrowTopRight } from "react-icons/tfi";
+
+import { FiArrowUpRight } from "react-icons/fi";
 
 const ContactMeForm = () => {
   return (
@@ -64,7 +65,11 @@ const ContactMeForm = () => {
           </div>
           <div className="text-center" style={{ marginTop: "4rem" }}>
             <UniversalBtn>
-              send Message <TfiArrowTopRight className="ms-1" />
+              Send away{" "}
+              <FiArrowUpRight
+                className=""
+                style={{ height: "24x", width: "24px" }}
+              />
             </UniversalBtn>
           </div>
         </div>
