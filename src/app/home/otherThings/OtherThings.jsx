@@ -17,7 +17,7 @@ const OtherThings = () => {
     { hubbyText: "Cars", hubbyIcon: null },
     { hubbyText: "Animals", hubbyIcon: null },
     { hubbyText: "Writing", hubbyIcon: null },
-    // { hubbyText: "Supporting Manchester Utd.", hubbyIcon: null },
+    { hubbyText: "SupportingManchesterUtd.", hubbyIcon: null },
     { hubbyText: "Music", hubbyIcon: null },
     { hubbyText: "Movies", hubbyIcon: null },
   ];
@@ -37,43 +37,53 @@ const OtherThings = () => {
       >
         I also love to do & talk about other things
       </p>
-      <div className="relative w-full overflow-hidden">
-        <motion.div
-          className="flex gap-4 flex-nowrap"
-          initial={{ x: "100%" }} // Start from right
-          animate={{ x: "-100%" }} // Move to left
-          transition={{
-            ease: "linear",
-            duration: 30, // Adjust speed (lower = faster)
-            repeat: Infinity,
-          }}
+
+      <motion.div
+        className="flex gap-4 flex-nowrap"
+        initial={{ x: "100%" }} // Start from right
+        animate={{ x: "-100%" }} // Move to left
+        transition={{
+          ease: "linear",
+          duration: 30, // Adjust speed (lower = faster)
+          repeat: Infinity,
+        }}
+      >
+        <div
+          className="text-center"
+          style={{ marginTop: "50px", paddingBottom: "2rem" }}
         >
-          {/* Duplicate array to make an infinite scroll effect */}
-          {[...arr, ...arr].map((hobby, index) => (
-            // <div key={index} className="" classNamemy-5>
-            <Hubby hubbyText={hobby.hubbyText} hubbyIcon={hobby.hubbyIcon} />
-            // </div>
+          {arr.slice(0, midpoint).map((ar, index) => (
+            <Hubby
+              key={`hubby-first-half${index}`}
+              hubbyText={ar.hubbyText}
+              hubbyIcon={ar.hubbyIcon}
+            />
           ))}
-        </motion.div>
-      </div>
-      <div className="text-center" style={{ marginTop: "74px" }}>
-        {arr.slice(0, midpoint).map((ar, index) => (
-          <Hubby
-            key={`hubby-first-half${index}`}
-            hubbyText={ar.hubbyText}
-            hubbyIcon={ar.hubbyIcon}
-          />
-        ))}
-      </div>
-      {/* <div className="text-center" style={{ marginTop: "40px" }}>
-        {arr.slice(midpoint).map((ar, index) => (
-          <Hubby
-            key={`hubby-second-half${index}`}
-            hubbyText={ar.hubbyText}
-            hubbyIcon={ar.hubbyIcon}
-          />
-        ))}
-      </div> */}
+        </div>
+      </motion.div>
+      <motion.div
+        className="flex gap-4 flex-nowrap"
+        initial={{ x: "-100%" }} // Start from right
+        animate={{ x: "100%" }} // Move to left
+        transition={{
+          ease: "linear",
+          duration: 30, // Adjust speed (lower = faster)
+          repeat: Infinity,
+        }}
+      >
+        <div
+          className="text-center"
+          style={{ paddingTop: "2rem", paddingBottom: "3rem" }}
+        >
+          {arr.slice(midpoint).map((ar, index) => (
+            <Hubby
+              key={`hubby-second-half${index}`}
+              hubbyText={ar.hubbyText}
+              hubbyIcon={ar.hubbyIcon}
+            />
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };

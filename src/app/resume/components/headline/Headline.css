@@ -1,0 +1,41 @@
+.headName {
+  font-weight: var(--font-weight-bold);
+  font-size: 5rem;
+  color: var(--text-color);
+  letter-spacing: -1.6px;
+  line-height: 88px;
+  margin-bottom: 24px;
+}
+
+.headTitle {
+  font-weight: var(--font-weight-regular);
+  font-size: 2rem;
+  line-height: 35.2px;
+  letter-spacing: -0.32px;
+}
+.headDesc {
+  margin-top: 4rem;
+  font-size: 1.25rem;
+  line-height: 34px;
+  color: var(--text-color-neutral);
+  margin-right: 1rem;
+}
+.headline {
+  margin-left: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .headName {
+    font-size: 3.75rem;
+    line-height: 66px;
+  }
+  .headTitle {
+    font-size: 1.875rem;
+  }
+  .headDesc {
+    font-size: 1.125rem;
+    line-height: 34.6px;
+  }
+  .headline {
+    margin-left: 0rem;
+  }
+}

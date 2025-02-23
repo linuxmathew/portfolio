@@ -1,0 +1,13 @@
+.infoText {
+  font-size: 18px;
+}
+.infoIcon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .infoText {
+    font-size: 14px;
+  }
+}

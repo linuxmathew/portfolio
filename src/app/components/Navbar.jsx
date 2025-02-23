@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <nav style={styles.navbar} className="navbar">
-      <div className="container">
+      <div className="container-md">
         <div className="navbar-logo">
           <Image
             className="logo-img" // Add a direct class for styling
