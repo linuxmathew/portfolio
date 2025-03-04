@@ -19,6 +19,7 @@
   line-height: 34px;
   color: var(--text-color-neutral);
   margin-right: 1rem;
+  width: 85%;
 }
 .headline {
   margin-left: 2rem;
@@ -34,6 +35,7 @@
   .headDesc {
     font-size: 1.125rem;
     line-height: 34.6px;
+    width: 100%;
   }
   .headline {
     margin-left: 0rem;

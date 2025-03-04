@@ -7,8 +7,21 @@ import ResumeDivider from "./components/Divider";
 import { CiGlobe, CiLocationOn } from "react-icons/ci";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { SlPhone } from "react-icons/sl";
+import ContentHead from "./components/header/ContentHead";
+import CoreTech from "./components/coreTech/CoreTech";
+import EducationSection from "./components/education/education";
 
 const Resume = () => {
+  const coreTechArr = [
+    "Javascript",
+    "ReactJs",
+    "NodeJs",
+    "Flask",
+    "Sanity",
+    "Bootstrap",
+    "MaterialUI",
+    "ElectronJs",
+  ];
   return (
     <>
       {/* <div
@@ -22,7 +35,7 @@ const Resume = () => {
       <div className=" two-column-section2">
         <div className="column2 column-left2">
           <div className="container-md infoSection">
-            <div className="row">
+            <div className="row" style={{ paddingTop: "15px" }}>
               <InfoComponent text="tayoafolabi.dev" icon={CiGlobe} />
               <InfoComponent
                 text="temfoden@gmail.com"
@@ -33,6 +46,22 @@ const Resume = () => {
             </div>
           </div>
           <ResumeDivider />
+          <div className="container-md infoSection">
+            <ContentHead
+              icon="/images/code-square.svg"
+              title="Core Technologies"
+            />
+            <div className="row" style={{}}>
+              {coreTechArr.map((arr) => (
+                <CoreTech skill={arr} />
+              ))}
+            </div>
+          </div>
+          <ResumeDivider />
+          <div className="container-md infoSection">
+            <ContentHead icon="/images/graduation-hat.svg" title="Education" />
+            <EducationSection />
+          </div>
         </div>
         <div className="column2 column-right2">
           <Headline />

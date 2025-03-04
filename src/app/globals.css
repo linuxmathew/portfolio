@@ -14,6 +14,7 @@ body {
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-semiBold: 600;
   --font-weight-bold: 700;
 
   /* added for the sake of universal btn that needs to maintain white text on hover  */

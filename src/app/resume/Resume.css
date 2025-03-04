@@ -7,6 +7,7 @@
   padding: 2rem 0; /*Adjust spacing*/
   gap: 0rem; /* Space between the columns */
   position: relative; /* For the dividing line */
+  padding-top: 7.125rem;
 }
 
 /* Individual Column Styling */
@@ -63,6 +64,7 @@
   .two-column-section2 {
     flex-direction: column;
     gap: 2rem; /* Adjust for stacked spacing */
+    padding-top: 0rem;
   }
 
   .two-column-section2::before {
