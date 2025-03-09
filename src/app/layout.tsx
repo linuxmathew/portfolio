@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import LetsWork from "./components/workTogether/letsWork";
+import ContactMeFooter from "./components/contactMe/ContactMe";
+import SectionDivider from "./components/SectionDivider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +32,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar />
         <main>{children}</main>
+        <LetsWork />
+        <div style={{ marginTop: "4.25rem" }}></div>
+        <ContactMeFooter />
       </body>
     </html>
   );

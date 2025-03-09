@@ -1,10 +1,11 @@
 import React from "react";
 
-const CoreTech = ({ skill }) => {
+const CoreTech = ({ skill, key }) => {
   return (
     <div
       className="d-flex align-items-center col-6 col-md-12"
       style={{ marginBottom: "20px" }}
+      key={key}
     >
       <span
         style={{

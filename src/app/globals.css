@@ -29,6 +29,7 @@ body {
   /* --primary-color: #2a2ac7; */
   --icon-color: #2a2ac7;
   --secondary-color: #eaeaea;
+  --resume-headline: #13132f;
 }
 
 [data-theme="dark"] {
@@ -44,4 +45,5 @@ body {
   --secondary-color: #333333;
 
   --shoot-up-arrow: #fdfdff;
+  --resume-headline: #fdfdff;
 }

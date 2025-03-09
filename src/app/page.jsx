@@ -32,13 +32,6 @@ export default function Home() {
       <SectionDivider isDefault />
       <OtherThings />
       <SectionDivider isDefault />
-      <LetsWork />
-      <SectionDivider
-        style={{
-          marginTop: "4.25rem",
-        }}
-      />
-      <ContactMeFooter />
     </>
   );
 }

@@ -10,29 +10,18 @@ import { SlPhone } from "react-icons/sl";
 import ContentHead from "./components/header/ContentHead";
 import CoreTech from "./components/coreTech/CoreTech";
 import EducationSection from "./components/education/education";
+import ExperienceWork from "./components/experience/ExperienceWork";
+import {
+  coreTechArr,
+  eduArr,
+  experienceArr,
+} from "../../../public/data/resumeData";
+import Link from "next/link";
 
 const Resume = () => {
-  const coreTechArr = [
-    "Javascript",
-    "ReactJs",
-    "NodeJs",
-    "Flask",
-    "Sanity",
-    "Bootstrap",
-    "MaterialUI",
-    "ElectronJs",
-  ];
   return (
     <>
-      {/* <div
-        className="mb-0 d-none d-md-block "
-        style={{
-          borderTop: "1px solid #aaaadd",
-          marginTop: "5.125rem",
-        }}
-      ></div> */}
-
-      <div className=" two-column-section2">
+      <div className="two-column-section2">
         <div className="column2 column-left2">
           <div className="container-md infoSection">
             <div className="row" style={{ paddingTop: "15px" }}>
@@ -52,20 +41,46 @@ const Resume = () => {
               title="Core Technologies"
             />
             <div className="row" style={{}}>
-              {coreTechArr.map((arr) => (
-                <CoreTech skill={arr} />
+              {coreTechArr.map((arr, index) => (
+                <CoreTech skill={arr} key={index} />
               ))}
             </div>
           </div>
           <ResumeDivider />
           <div className="container-md infoSection">
             <ContentHead icon="/images/graduation-hat.svg" title="Education" />
-            <EducationSection />
+            {eduArr.map((edu) => (
+              <EducationSection
+                course={edu.course}
+                school={edu.school}
+                date={edu.date}
+              />
+            ))}
           </div>
         </div>
         <div className="column2 column-right2">
           <Headline />
           <ResumeDivider />
+          <div className=" headline container-md ">
+            <ContentHead icon="/images/briefcase-02.svg" title="Experience" />
+            {experienceArr.map((exp) => (
+              <ExperienceWork
+                key={exp.id}
+                companyName={exp.companyName}
+                location={exp.location}
+                title={exp.title}
+                date={exp.date}
+                works={exp.works}
+              />
+            ))}
+
+            <ContentHead icon="/images/terminal-browser.svg" title="Projects" />
+            <p className="projectDesc">
+              Links to some of my work can be found on{" "}
+              <Link href="/work">temitayoafolabi.com/work</Link> and details can
+              be provided upon request via a scheduled demo call.
+            </p>
+          </div>
         </div>
       </div>
       <div

@@ -22,6 +22,7 @@
 
 .column-right2 {
   width: 75%;
+  text-align: justify;
   text-align: left;
 }
 
@@ -58,7 +59,11 @@
 .infoSection {
   margin-left: 4rem;
 }
-
+.projectDesc {
+  font-weight: var(--font-weight-regular);
+  font-size: 18px;
+  width: 75%;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .two-column-section2 {
@@ -96,5 +101,9 @@
   }
   .infoSection {
     margin-left: 0rem;
+  }
+  .projectDesc {
+    width: 100%;
+    font-size: 16px;
   }
 }

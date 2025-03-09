@@ -1,8 +1,8 @@
 import React from "react";
 
-const EducationSection = () => {
+const EducationSection = ({ course, school, date }) => {
   return (
-    <div>
+    <div style={{ marginBottom: "2rem" }}>
       <p
         style={{
           fontSize: "20px",
@@ -12,7 +12,7 @@ const EducationSection = () => {
           marginBottom: "8px",
         }}
       >
-        BSC. Computer Engineering
+        {course}
       </p>
       <p
         style={{
@@ -22,11 +22,9 @@ const EducationSection = () => {
           marginBottom: "8px",
         }}
       >
-        Obafemi Awolowo University
+        {school}
       </p>
-      <i style={{ fontSize: "18px", color: "var(--shoot-up-arrow)" }}>
-        Sep 2017 - Dec 2022
-      </i>
+      <i style={{ fontSize: "18px", color: "var(--shoot-up-arrow)" }}>{date}</i>
     </div>
   );
 };

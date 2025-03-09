@@ -19,7 +19,8 @@
   line-height: 34px;
   color: var(--text-color-neutral);
   margin-right: 1rem;
-  width: 85%;
+  width: 75%;
+  text-align: justify;
 }
 .headline {
   margin-left: 2rem;

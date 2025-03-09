@@ -23,7 +23,8 @@ const ContentHead = ({ icon, title }) => {
         style={{
           fontSize: "24px",
           fontWeight: "var(--font-weight-semiBold)",
-          letterSpacing: "-0.9px",
+          letterSpacing: "0.24px",
+          color: "var(--resume-headline)",
         }}
       >
         {title}
