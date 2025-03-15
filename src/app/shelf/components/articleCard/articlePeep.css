@@ -1,0 +1,47 @@
+.displayHeading {
+  font-size: 32px;
+}
+
+.dateAndTime {
+  font-size: 1rem;
+  color: var(--shoot-up-arrow);
+  font-weight: var(--font-weight-regular);
+}
+.displayHeading {
+  color: var(--resume-headline);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 140%;
+}
+
+.articleTips {
+  font-size: 20px;
+  color: var(--text-color-neutral);
+}
+.articleLead {
+  font-size: 20px;
+  color: var(--text-color-neutral);
+  margin-top: 20px;
+  font-weight: var(--font-weight-regular);
+}
+.colLeftSide {
+  padding-right: 95px;
+}
+@media (max-width: 768px) {
+  .displayHeading {
+    font-size: 20px;
+  }
+  .dateAndTime {
+    font-size: 14px;
+  }
+  .articleLead {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+  .articleTips {
+    font-size: 16px;
+  }
+  .colLeftSide {
+    padding-right: 0px;
+  }
+}
