@@ -2,6 +2,7 @@
 import SlashHead from "../components/slashHead/slashHead";
 import ArticlePeep from "./components/articleCard/articlePeep";
 import SectionDivider from "../components/SectionDivider";
+import "./shelf.css";
 
 export default function Shelf() {
   const articleArr = [
@@ -26,7 +27,7 @@ export default function Shelf() {
   ];
   return (
     <>
-      <div className="container-md px-md-5 px-3">
+      <div className="shelf-contain container-md px-md-5">
         <SlashHead headName="Shelf" />
         {articleArr.map((article, index) => (
           <div key={index}>

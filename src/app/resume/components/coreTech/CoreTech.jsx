@@ -5,7 +5,7 @@ const CoreTech = ({ skill, key }) => {
     <div
       className="d-flex align-items-center col-6 col-md-12"
       style={{ marginBottom: "20px" }}
-      key={key}
+      key={skill}
     >
       <span
         style={{

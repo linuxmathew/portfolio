@@ -10,11 +10,13 @@ export const coreTechArr = [
 ];
 export const eduArr = [
   {
+    id: 1,
     course: "BSC. Computer Engineering",
     school: "Obafemi Awolowo University",
     date: "Sept., 2017 - Dec., 2022",
   },
   {
+    id: 2,
     course: "OND. Computer Engineering",
     school: "Igbajo Polytechnic",
     date: "June, 2012 - Sept.,2014",

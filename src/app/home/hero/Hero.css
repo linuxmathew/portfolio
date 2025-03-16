@@ -1,5 +1,5 @@
 .hero-wrapper {
-  margin-top: 6.435rem;
+  margin-top: 9.435rem;
   padding-bottom: 5.68rem;
 }
 .image-wrapper {
@@ -26,7 +26,7 @@
 
 @media (max-width: 768px) {
   .hero-wrapper {
-    margin-top: 5.5rem;
+    margin-top: 6.5rem;
     padding-bottom: 2.5rem;
   }
   .hero-title {

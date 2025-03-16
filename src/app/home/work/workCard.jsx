@@ -13,8 +13,9 @@ const WorkCard = ({ image, title, link }) => {
       <Image
         src={image}
         alt={title}
-        width={400}
-        height={240}
+        width={330}
+        height={250}
+        layout="responsive"
         className="object-cover w-full h-60"
       />
       {/* <div className="p-4 bg-white">

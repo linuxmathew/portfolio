@@ -41,8 +41,8 @@ const Resume = () => {
               title="Core Technologies"
             />
             <div className="row" style={{}}>
-              {coreTechArr.map((arr, index) => (
-                <CoreTech skill={arr} key={index} />
+              {coreTechArr.map((arr) => (
+                <CoreTech skill={arr} />
               ))}
             </div>
           </div>
@@ -54,6 +54,7 @@ const Resume = () => {
                 course={edu.course}
                 school={edu.school}
                 date={edu.date}
+                key={edu.id}
               />
             ))}
           </div>

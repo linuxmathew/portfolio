@@ -1,7 +1,7 @@
 .article-wrapper {
   padding-left: 80px;
   padding-right: 80px;
-  margin-top: 4.5rem;
+  margin-top: 8.5rem;
 }
 
 .articleHead {
@@ -32,7 +32,7 @@
   .article-wrapper {
     padding-left: 2%;
     padding-right: 2%;
-    margin-top: 2.5rem;
+    margin-top: 5.5rem;
   }
   .content-wrapper {
     width: 100%;

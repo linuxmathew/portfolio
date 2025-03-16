@@ -2,13 +2,13 @@
 import React from "react";
 import SectionHead from "../components/secHead/SectionHead";
 import UniversalBtn from "../components/buttons/UniversalBtn";
-import { TfiArrowTopRight } from "react-icons/tfi";
 import WorkCard from "./work/workCard";
 import "swiper/css"; // Core Swiper styles
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const WorkSection = () => {
   const projects = [
@@ -42,29 +42,29 @@ const WorkSection = () => {
           secHead2="Selected projects"
           secDesc=" From product based teams and startups I’ve worked with"
         />
+        <Swiper
+          modules={[Pagination, Navigation]}
+          pagination={{ clickable: true }}
+          navigation={true}
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {projects.map((project, index) => (
+            <SwiperSlide key={index}>
+              <WorkCard
+                image={project.image}
+                title={project.title}
+                link={project.link}
+                key={index}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-      <Swiper
-        modules={[Pagination, Navigation]}
-        pagination={{ clickable: true }}
-        navigation={true}
-        spaceBetween={30}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          1024: { slidesPerView: 3 },
-        }}
-      >
-        {projects.map((project, index) => (
-          <SwiperSlide key={index}>
-            <WorkCard
-              image={project.image}
-              title={project.title}
-              link={project.link}
-              key={index}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
       {/* <div className="row gx-3 gy-3 workSlide "> */}
       {/* <div
           className="col col-12 col-6"
@@ -96,7 +96,7 @@ const WorkSection = () => {
       {/* </div> */}
       <div className="text-center" style={{ marginTop: "3.785rem" }}>
         <UniversalBtn>
-          See my works <TfiArrowTopRight className="ms-1" />
+          See my works <FiArrowUpRight className="ms-1" />
         </UniversalBtn>
       </div>
     </>

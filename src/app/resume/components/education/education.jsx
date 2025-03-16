@@ -1,8 +1,8 @@
 import React from "react";
 
-const EducationSection = ({ course, school, date }) => {
+const EducationSection = ({ course, school, date, key }) => {
   return (
-    <div style={{ marginBottom: "2rem" }}>
+    <div style={{ marginBottom: "2rem" }} key={key}>
       <p
         style={{
           fontSize: "20px",
