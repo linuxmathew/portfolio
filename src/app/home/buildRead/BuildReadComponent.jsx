@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import UniversalBtn from "../../components/buttons/UniversalBtn";
-import { TfiArrowTopRight } from "react-icons/tfi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const BuildReadComponent = ({
   imgPath,
@@ -27,7 +27,7 @@ const BuildReadComponent = ({
       </p>
       <p className="buildDesc">{desc}</p>
       <UniversalBtn type="primary">
-        {btnText} <TfiArrowTopRight className="ms-1" />
+        {btnText} <FiArrowUpRight className="ms-1" />
       </UniversalBtn>
     </>
   );

@@ -12,12 +12,12 @@ export const eduArr = [
   {
     course: "BSC. Computer Engineering",
     school: "Obafemi Awolowo University",
-    date: "Sep 2017 - Dec 2022",
+    date: "Sept., 2017 - Dec., 2022",
   },
   {
     course: "OND. Computer Engineering",
     school: "Igbajo Polytechnic",
-    date: "June,2012- Sept.,2014",
+    date: "June, 2012 - Sept.,2014",
   },
 ];
 export const experienceArr = [

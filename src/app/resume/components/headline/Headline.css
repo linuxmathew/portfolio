@@ -18,7 +18,7 @@
   font-size: 1.25rem;
   line-height: 34px;
   color: var(--text-color-neutral);
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   width: 75%;
   text-align: justify;
 }
@@ -27,13 +27,15 @@
 }
 @media screen and (max-width: 768px) {
   .headName {
-    font-size: 3.75rem;
+    font-size: 3.125rem;
     line-height: 66px;
+    margin-bottom: 8px;
   }
   .headTitle {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
   .headDesc {
+    margin-top: 1.5rem;
     font-size: 1.125rem;
     line-height: 34.6px;
     width: 100%;

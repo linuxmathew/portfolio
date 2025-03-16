@@ -1,7 +1,6 @@
 import React from "react";
 import SectionHead from "../../components/secHead/SectionHead";
 import UniversalBtn from "../buttons/UniversalBtn";
-import { TfiArrowTopRight } from "react-icons/tfi";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import "./letsWork.css";
@@ -18,7 +17,7 @@ const LetsWork = () => {
           />
           <div style={{ marginTop: "2rem" }}></div>
           <UniversalBtn>
-            temfoden@gmail.com <TfiArrowTopRight className="ms-1" />
+            temfoden@gmail.com <FiArrowUpRight className="ms-1" />
           </UniversalBtn>
         </div>
         <div className="col col-12 col-md-6 ms-0 ps-md-5">

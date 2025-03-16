@@ -12,10 +12,7 @@ import ContactMeFooter from "./components/contactMe/ContactMe";
 export default function Home() {
   return (
     <>
-      <div
-        className="container-md"
-        style={{ marginTop: "77px", paddingBottom: "5.68rem" }}
-      >
+      <div className="container-md">
         <Hero />
       </div>
       <SlideTech />

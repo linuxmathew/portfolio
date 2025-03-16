@@ -1,18 +1,23 @@
-"use client"; // Required for client-side interactivity
+"use client";
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "./Navbar.css";
 import UniversalBtn from "./buttons/UniversalBtn";
 
 export default function Navbar() {
   const [theme, setTheme] = useState("light");
   const [isOpen, setIsOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState(""); // Store the path after hydration
+  const pathname = usePathname(); // Get the current path
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    setCurrentPath(pathname); // Ensure it's set on the client
+  }, [pathname]);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -22,49 +27,51 @@ export default function Navbar() {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
+  // Define pages
+  const pages = ["home", "work", "resume", "shelf"];
+  const currentPage =
+    currentPath === "/" ? "home" : currentPath.replace("/", "");
+
+  // Filter pages but ensure Home is included if not already on it
+  const filteredPages = pages.filter((page) => page !== currentPage);
+
   return (
     <nav style={styles.navbar} className="navbar">
       <div className="container-md">
         <div className="navbar-logo">
-          <Image
-            className="logo-img" // Add a direct class for styling
-            src="/images/logo.svg" // Path to the image in the `public` folder
-            alt="Logo"
-            width={50} // Desired width
-            height={50} // Desired height
-            priority // Ensures the image is loaded immediately
-          />
+          <Link href="/">
+            <Image
+              className="logo-img"
+              src="/images/logo.svg"
+              alt="Logo"
+              width={50}
+              height={50}
+              priority
+            />
+          </Link>
         </div>
 
-        {/* Navbar Menu */}
+        {/* Dynamic Navbar Menu */}
         <ul className={`navbar-menu ${isOpen ? "active" : ""}`}>
-          <li>
-            <Link href="/work" onClick={() => setIsOpen(false)}>
-              My Work
-            </Link>
-          </li>
-          <li>
-            <Link href="/resume" onClick={() => setIsOpen(false)}>
-              Resume
-            </Link>
-          </li>
-          <li>
-            <Link href="/shelf" onClick={() => setIsOpen(false)}>
-              Shelf
-            </Link>
-          </li>
+          {filteredPages.map((page) => (
+            <li key={page}>
+              <Link
+                href={page === "home" ? "/" : `/${page}`}
+                onClick={() => setIsOpen(false)}
+              >
+                {page.charAt(0).toUpperCase() + page.slice(1)}
+              </Link>
+            </li>
+          ))}
         </ul>
+
         <div className="navbar-actions">
-          {/* Theme Toggle Button */}
           <button onClick={toggleTheme} style={styles.themeButton}>
             {theme === "light" ? <FaMoon /> : <FaSun />}
           </button>
-          {/* Contact Me Button (Hidden in Small Screens) */}
-          {/* <button className="contact-btn">Contact Me</button>
-           */}
           <UniversalBtn type="primary">Contact me</UniversalBtn>
-          {/* <button className="">Contact me</button> */}
         </div>
+
         {/* Hamburger Menu for Small Screens */}
         <div className="navbar-toggle" onClick={toggleMenu}>
           <span className="hamburger"></span>
@@ -78,6 +85,11 @@ export default function Navbar() {
 
 const styles = {
   navbar: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    zIndex: "1000",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -86,11 +98,6 @@ const styles = {
     color: "var(--text-color)",
     boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
     borderBottom: "1px solid #aaaadd",
-  },
-  logo: {
-    fontSize: "1.5rem",
-    fontWeight: "bold",
-    margin: 0,
   },
   themeButton: {
     background: "none",

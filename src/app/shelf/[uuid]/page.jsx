@@ -81,7 +81,9 @@ const ArticleDetails = async ({ params }) => {
 
           <p>Details for the article with ID {uuid} will go here.</p>
           {dummy.lead.map((paragraph) => (
-            <p className="article-body">{paragraph.para}</p>
+            <p key={paragraph.id} className="article-body">
+              {paragraph.para}
+            </p>
           ))}
         </div>
       </div>

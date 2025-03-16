@@ -3,7 +3,7 @@ import SectionHead from "../components/secHead/SectionHead";
 import Image from "next/image";
 import "./OverTheYears.css";
 import UniversalBtn from "../components/buttons/UniversalBtn";
-import { TfiArrowTopRight } from "react-icons/tfi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const OverTheYears = () => {
   // Example usage:
@@ -31,7 +31,7 @@ const OverTheYears = () => {
           </p>
           <div style={{ marginTop: "3rem" }}></div>
           <UniversalBtn>
-            My resume <TfiArrowTopRight className="ms-1" />
+            My resume <FiArrowUpRight className="ms-1" />
           </UniversalBtn>
           <div
             className="d-block d-md-none"

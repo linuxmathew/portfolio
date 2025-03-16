@@ -2,12 +2,12 @@ import Image from "next/image";
 import React from "react";
 import "./Hero.css";
 import UniversalBtn from "../../components/buttons/UniversalBtn";
-import { TfiArrowTopRight } from "react-icons/tfi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Hero = () => {
   return (
-    <div>
-      <div className="row ">
+    <div className="hero-wrapper">
+      <div className="row">
         <div
           className="col col-12 col-md-6"
           style={{ fontWeight: "var( --font-weight-bold)" }}
@@ -31,31 +31,33 @@ const Hero = () => {
           </span>
 
           <div
+            className="button-wrapper"
             style={{
               marginTop: "3.18rem",
             }}
           >
             <UniversalBtn style={{ fontWeight: "var(--font-weight-medium)" }}>
-              Get in touch <TfiArrowTopRight className="ms-1" />
+              Get in touch <FiArrowUpRight className="ms-1" />
             </UniversalBtn>
             {/* <UniversalBtn type="primary">Get in touch</UniversalBtn> */}
           </div>
 
           <div
-            className=""
+            className="row "
+            id="hero-subDescription"
             style={{
               marginTop: "6.75rem",
               fontWeight: "var(--font-weight-regular)",
               fontSize: "14px",
-              gap: "4.43rem",
-              display: "flex",
+              // gap: "4.43rem",
+              // display: "flex",
             }}
           >
-            <p>
+            <p className="col col-6">
               Highly skilled at progressive enhancement, design systems &amp;
               Software Engineering.
             </p>
-            <p>
+            <p className="col col-6">
               {/* Demonstrated success in delivering impactful products for clients,
               startups, and established businesses, often collaborating with
               teams when needed to bring these products to life. */}
