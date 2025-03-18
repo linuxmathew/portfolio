@@ -30,7 +30,7 @@ const Resume = () => {
                 text="temfoden@gmail.com"
                 icon={HiOutlineEnvelope}
               />
-              <InfoComponent text="+234 706 700 1568" icon={SlPhone} />
+              <InfoComponent text="+234 7067001568" icon={SlPhone} />
               <InfoComponent text="Ibadan, Nigeria" icon={CiLocationOn} />
             </div>
           </div>
