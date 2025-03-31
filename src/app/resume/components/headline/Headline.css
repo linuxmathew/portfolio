@@ -20,7 +20,7 @@
   color: var(--text-color-neutral);
   /* margin-right: 1rem; */
   width: 75%;
-  text-align: justify;
+  /* text-align: justify; */
 }
 .headline {
   margin-left: 2rem;

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;700&display=swap");
 
 body {
@@ -47,3 +51,31 @@ body {
   --shoot-up-arrow: #fdfdff;
   --resume-headline: #fdfdff;
 }
+
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+/* .animate-scroll {
+  animation: scroll var(--animation-duration, 20s) linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2));
+  }
+}
+
+.scroller ul {
+  list-style: none;
+} */

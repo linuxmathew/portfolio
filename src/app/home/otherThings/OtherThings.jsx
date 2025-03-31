@@ -2,7 +2,7 @@
 import React from "react";
 import Hubby from "./Hubby";
 import { PiAirplaneTiltThin, PiBookOpenThin } from "react-icons/pi";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const OtherThings = () => {
   const arr = [
@@ -38,7 +38,7 @@ const OtherThings = () => {
         I also love to do & talk about other things
       </p>
 
-      <motion.div
+      {/* <motion.div
         className="flex gap-4 flex-nowrap"
         initial={{ x: "100%" }} // Start from right
         animate={{ x: "-100%" }} // Move to left
@@ -60,8 +60,8 @@ const OtherThings = () => {
             />
           ))}
         </div>
-      </motion.div>
-      <motion.div
+      </motion.div> */}
+      {/* <motion.div
         className="flex gap-4 flex-nowrap"
         initial={{ x: "-100%" }} // Start from right
         animate={{ x: "100%" }} // Move to left
@@ -83,7 +83,7 @@ const OtherThings = () => {
             />
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

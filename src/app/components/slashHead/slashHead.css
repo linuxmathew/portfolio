@@ -5,6 +5,8 @@
 .slashHeadWrap {
   font-weight: var(--font-weight-bold);
   font-size: 64px;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 
 .slashStroke {
@@ -12,6 +14,10 @@
 }
 .slashHeadText {
   color: var(--resume-headline);
+}
+.slashDesc {
+  color: var(--text-color-neutral);
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -21,5 +27,8 @@
   .slashHeadWrap {
     font-size: 36px;
     margin-bottom: 18px;
+  }
+  .slashDesc {
+    font-size: 16px;
   }
 }
