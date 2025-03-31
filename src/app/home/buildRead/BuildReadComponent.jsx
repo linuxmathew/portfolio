@@ -11,6 +11,7 @@ const BuildReadComponent = ({
   desc,
   btnText,
   btnRoute,
+  onClick,
 }) => {
   return (
     <>
@@ -26,7 +27,7 @@ const BuildReadComponent = ({
         {afterBreak}
       </p>
       <p className="buildDesc">{desc}</p>
-      <UniversalBtn type="primary">
+      <UniversalBtn type="primary" onClick={onClick}>
         {btnText} <FiArrowUpRight className="ms-1" />
       </UniversalBtn>
     </>

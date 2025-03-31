@@ -10,8 +10,10 @@ import WorkCard from "./work/workCard";
 // import { Navigation, Pagination } from "swiper/modules";
 import { FiArrowUpRight } from "react-icons/fi";
 import { InfiniteMovingCards } from "../components/movingCard/infiniteMovingCards";
+import { useNavigate } from "../utils/navigation";
 
 const WorkSection = () => {
+  const navigate = useNavigate();
   const projects = [
     {
       image: "/images/project1.png", // Ensure the public folder in Next.js
@@ -64,7 +66,7 @@ const WorkSection = () => {
       />
 
       <div className="text-center" style={{ marginTop: "3.785rem" }}>
-        <UniversalBtn>
+        <UniversalBtn onClick={() => navigate("/work")}>
           See my works <FiArrowUpRight className="ms-1" />
         </UniversalBtn>
       </div>

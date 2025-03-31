@@ -1,11 +1,14 @@
+"use client";
 import React from "react";
 import SectionHead from "../components/secHead/SectionHead";
 import Image from "next/image";
 import "./OverTheYears.css";
 import UniversalBtn from "../components/buttons/UniversalBtn";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useNavigate } from "../utils/navigation";
 
 const OverTheYears = () => {
+  const navigate = useNavigate();
   // Example usage:
 
   return (
@@ -30,7 +33,7 @@ const OverTheYears = () => {
             viverra in. sit amet
           </p>
           <div style={{ marginTop: "3rem" }}></div>
-          <UniversalBtn>
+          <UniversalBtn onClick={() => navigate("resume")}>
             My resume <FiArrowUpRight className="ms-1" />
           </UniversalBtn>
           <div
