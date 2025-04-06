@@ -1,24 +1,24 @@
 "use client";
 import React from "react";
 import Hubby from "./Hubby";
-import { PiAirplaneTiltThin, PiBookOpenThin } from "react-icons/pi";
+import { InfiniteMovingCards } from "@/app/components/movingCard/infiniteMovingCards";
 // import { motion } from "framer-motion";
 
 const OtherThings = () => {
   const arr = [
-    { hubbyText: "Travelling", hubbyIcon: PiAirplaneTiltThin },
-    { hubbyText: "Reading", hubbyIcon: PiBookOpenThin },
-    { hubbyText: "Cooking", hubbyIcon: null },
-    { hubbyText: "Cycling", hubbyIcon: null },
-    { hubbyText: "Workout", hubbyIcon: null },
-    { hubbyText: "Partying", hubbyIcon: null },
-    { hubbyText: "Reading", hubbyIcon: null },
-    { hubbyText: "Learning", hubbyIcon: null },
-    { hubbyText: "Cars", hubbyIcon: null },
+    { hubbyText: "Travelling", hubbyIcon: "PiAirplaneTiltThin" },
+    { hubbyText: "Reading", hubbyIcon: "PiBookOpenThin" },
+    { hubbyText: "Cooking", hubbyIcon: "LuCookingPot" },
+    { hubbyText: "Cycling", hubbyIcon: "GiCycling" },
+    { hubbyText: "Workout", hubbyIcon: "CiDumbbell" },
+    { hubbyText: "Partying", hubbyIcon: "PiCheersLight" },
+    { hubbyText: "Reading", hubbyIcon: "PiBookOpenThin" },
+    { hubbyText: "Learning", hubbyIcon: "PiBookOpenThin" },
+    { hubbyText: "Cars", hubbyIcon: "IoCarSportOutline" },
     { hubbyText: "Animals", hubbyIcon: null },
-    { hubbyText: "Writing", hubbyIcon: null },
-    { hubbyText: "SupportingManchesterUtd.", hubbyIcon: null },
-    { hubbyText: "Music", hubbyIcon: null },
+    { hubbyText: "Writing", hubbyIcon: "RiQuillPenAiLine" },
+    { hubbyText: "Manutd", hubbyIcon: "IoIosFootball" },
+    { hubbyText: "Music", hubbyIcon: "PiMusicNoteSimpleThin" },
     { hubbyText: "Movies", hubbyIcon: null },
   ];
   const midpoint = Math.ceil(arr.length / 2);
@@ -37,53 +37,28 @@ const OtherThings = () => {
       >
         I also love to do & talk about other things
       </p>
-
-      {/* <motion.div
-        className="flex gap-4 flex-nowrap"
-        initial={{ x: "100%" }} // Start from right
-        animate={{ x: "-100%" }} // Move to left
-        transition={{
-          ease: "linear",
-          duration: 30, // Adjust speed (lower = faster)
-          repeat: Infinity,
-        }}
-      >
-        <div
-          className="text-center"
-          style={{ marginTop: "50px", paddingBottom: "2rem" }}
-        >
-          {arr.slice(0, midpoint).map((ar, index) => (
-            <Hubby
-              key={`hubby-first-half${index}`}
-              hubbyText={ar.hubbyText}
-              hubbyIcon={ar.hubbyIcon}
-            />
-          ))}
-        </div>
-      </motion.div> */}
-      {/* <motion.div
-        className="flex gap-4 flex-nowrap"
-        initial={{ x: "-100%" }} // Start from right
-        animate={{ x: "100%" }} // Move to left
-        transition={{
-          ease: "linear",
-          duration: 30, // Adjust speed (lower = faster)
-          repeat: Infinity,
-        }}
-      >
-        <div
-          className="text-center"
-          style={{ paddingTop: "2rem", paddingBottom: "3rem" }}
-        >
-          {arr.slice(midpoint).map((ar, index) => (
-            <Hubby
-              key={`hubby-second-half${index}`}
-              hubbyText={ar.hubbyText}
-              hubbyIcon={ar.hubbyIcon}
-            />
-          ))}
-        </div>
-      </motion.div> */}
+      <InfiniteMovingCards
+        items={[...arr.slice(0, midpoint)]}
+        renderItem={(ar, index) => (
+          <Hubby key={`hubby-first-half${index}`} hobby={ar} />
+        )}
+        fadeEdges={true}
+        gap="10px"
+        itemWidth=""
+        pauseOnHover={false}
+      />
+      <InfiniteMovingCards
+        items={[...arr.slice(midpoint)]}
+        renderItem={(ar, index) => (
+          <Hubby key={`hubby-first-half${index}`} hobby={ar} />
+        )}
+        // itemWidth="600px" // Adjust to fit ~3 cards on your screen
+        fadeEdges={true}
+        gap="10px"
+        itemWidth=""
+        direction="forwards"
+        pauseOnHover={false}
+      />
     </div>
   );
 };

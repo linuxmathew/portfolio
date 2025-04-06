@@ -90,7 +90,7 @@ export const InfiniteMovingCards = ({
   direction = "left",
   speed = "normal",
   pauseOnHover = true,
-  itemWidth = "350px",
+  itemWidth = "",
   gap = "16px",
   className,
   itemClassName,
