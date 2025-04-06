@@ -1,13 +1,11 @@
 import Hero from "./home/hero/Hero";
-import SlideTech from "./components/slideTechnologies/SlideTech";
+import SlideTech from "./components/slideTechnologies/slideTech";
 import BuildRead from "./home/buildRead/BuildRead";
 import WorkSection from "./home/WorkSection";
 import OverTheYears from "./home/OverTheYears";
 import SectionDivider from "./components/SectionDivider";
 import WhatPeopleSay from "./home/whatPeopleSay/WhatPeopleSay";
 import OtherThings from "./home/otherThings/OtherThings";
-import LetsWork from "./components/workTogether/letsWork";
-import ContactMeFooter from "./components/contactMe/ContactMe";
 
 export default function Home() {
   return (

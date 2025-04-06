@@ -2,12 +2,14 @@
 import React from "react";
 import Hubby from "./Hubby";
 import { InfiniteMovingCards } from "@/app/components/movingCard/infiniteMovingCards";
+
 // import { motion } from "framer-motion";
 
 const OtherThings = () => {
   const arr = [
     { hubbyText: "Travelling", hubbyIcon: "PiAirplaneTiltThin" },
     { hubbyText: "Reading", hubbyIcon: "PiBookOpenThin" },
+    { hubbyText: "Cat", hubbyIcon: "LuCat" },
     { hubbyText: "Cooking", hubbyIcon: "LuCookingPot" },
     { hubbyText: "Cycling", hubbyIcon: "GiCycling" },
     { hubbyText: "Workout", hubbyIcon: "CiDumbbell" },
@@ -15,11 +17,11 @@ const OtherThings = () => {
     { hubbyText: "Reading", hubbyIcon: "PiBookOpenThin" },
     { hubbyText: "Learning", hubbyIcon: "PiBookOpenThin" },
     { hubbyText: "Cars", hubbyIcon: "IoCarSportOutline" },
-    { hubbyText: "Animals", hubbyIcon: null },
+    { hubbyText: "Animals", hubbyIcon: "GiHollowCat" },
     { hubbyText: "Writing", hubbyIcon: "RiQuillPenAiLine" },
     { hubbyText: "Manutd", hubbyIcon: "IoIosFootball" },
     { hubbyText: "Music", hubbyIcon: "PiMusicNoteSimpleThin" },
-    { hubbyText: "Movies", hubbyIcon: null },
+    { hubbyText: "Movies", hubbyIcon: "MdOutlineLocalMovies" },
   ];
   const midpoint = Math.ceil(arr.length / 2);
 
@@ -43,18 +45,18 @@ const OtherThings = () => {
           <Hubby key={`hubby-first-half${index}`} hobby={ar} />
         )}
         fadeEdges={true}
-        gap="10px"
+        gap="23px"
         itemWidth=""
         pauseOnHover={false}
       />
       <InfiniteMovingCards
         items={[...arr.slice(midpoint)]}
         renderItem={(ar, index) => (
-          <Hubby key={`hubby-first-half${index}`} hobby={ar} />
+          <Hubby key={`hubby-second-half${index}`} hobby={ar} />
         )}
         // itemWidth="600px" // Adjust to fit ~3 cards on your screen
         fadeEdges={true}
-        gap="10px"
+        gap="23px"
         itemWidth=""
         direction="forwards"
         pauseOnHover={false}

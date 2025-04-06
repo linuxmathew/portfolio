@@ -1,9 +1,9 @@
 import React from "react";
 import { CiDumbbell } from "react-icons/ci";
-import { GiCycling } from "react-icons/gi";
+import { GiCycling, GiHollowCat } from "react-icons/gi";
 import { IoIosFootball } from "react-icons/io";
 import { IoBookOutline, IoCarSportOutline } from "react-icons/io5";
-import { LuCookingPot } from "react-icons/lu";
+import { LuCat, LuCookingPot } from "react-icons/lu";
 import {
   PiAirplaneTiltThin,
   PiBookOpenThin,
@@ -12,6 +12,7 @@ import {
   PiMusicNoteSimpleThin,
 } from "react-icons/pi";
 import { RiQuillPenAiLine } from "react-icons/ri";
+import { TbMovie } from "react-icons/tb";
 
 const iconMap = {
   LuCookingPot: LuCookingPot,
@@ -27,19 +28,24 @@ const iconMap = {
   PiMusicNoteSimpleThin: PiMusicNoteSimpleThin,
   PiHeadCircuitThin: PiHeadCircuitThin,
   RiQuillPenAiLine: RiQuillPenAiLine,
+  GiHollowCat: GiHollowCat,
+  LuCat: LuCat,
+  MdOutlineLocalMovies: TbMovie,
 };
 
 const Hubby = ({ hobby }) => {
   const IconComponent = iconMap[hobby.hubbyIcon];
   return (
     <span
-      className="align-items-center me-3"
+      className="align-items-center"
       style={{
         padding: "16px 32px",
         border: "1px solid var(--text-color-neutral-border)",
-        color: "color: var(--bg-color);",
+        color: " var(--bg-color)",
         borderRadius: "36px",
-        color: "",
+
+        display: "flex", // Add Flexbox
+        justifyContent: "center", // Center horizontally
       }}
     >
       {hobby.hubbyIcon && (

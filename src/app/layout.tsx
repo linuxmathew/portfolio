@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "./components/Navbar";
+import { Schibsted_Grotesk } from "next/font/google"; // Import the font
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 import LetsWork from "./components/workTogether/letsWork";
 import ContactMeFooter from "./components/contactMe/ContactMe";
 import SectionDivider from "./components/SectionDivider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Configure Schibsted Grotesk
+const schibstedGrotesk = Schibsted_Grotesk({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "900"], // Match your design’s weights
+  variable: "--font-schibsted-grotesk",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={schibstedGrotesk.className}>
         <Navbar />
         <main>{children}</main>
         <LetsWork />
