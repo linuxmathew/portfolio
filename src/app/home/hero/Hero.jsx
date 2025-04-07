@@ -7,9 +7,9 @@ import { FiArrowUpRight } from "react-icons/fi";
 const Hero = () => {
   return (
     <div className="hero-wrapper">
-      <div className="row">
+      <div className="row g-5">
         <div
-          className="col col-12 col-md-6"
+          className="col col-12 col-md-7"
           style={{ fontWeight: "var( --font-weight-bold)" }}
         >
           <div className="hero-title">
@@ -42,17 +42,7 @@ const Hero = () => {
             {/* <UniversalBtn type="primary">Get in touch</UniversalBtn> */}
           </div>
 
-          <div
-            className="row "
-            id="hero-subDescription"
-            style={{
-              marginTop: "6.75rem",
-              fontWeight: "var(--font-weight-regular)",
-              fontSize: "14px",
-              // gap: "4.43rem",
-              // display: "flex",
-            }}
-          >
+          <div className="row" id="hero-subDescription">
             <p className="col col-6">
               Highly skilled at progressive enhancement, design systems &amp;
               Software Engineering.
@@ -67,14 +57,14 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="col col-12 col-md-6">
+        <div className="col col-12 col-md-5">
           <div className="image-wrapper">
             <Image
               src="/images/actor.svg"
               alt="Actor Illustration"
-              layout="responsive"
-              width={500}
-              height={500}
+              // layout="responsive"
+              width={491}
+              height={4080}
               className="hero-image"
             />
           </div>

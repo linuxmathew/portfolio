@@ -3,7 +3,6 @@ import { FaArrowRight } from "react-icons/fa";
 // import "./workCard.css";
 
 const WorkCard = ({ image, title, link, desc, addLink }) => {
-  console.log("WorkCard props:", { image, title, link, desc });
   return (
     <>
       <div
