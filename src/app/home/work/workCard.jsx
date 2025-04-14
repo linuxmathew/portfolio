@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
-// import "./workCard.css";
+import "./workCard.css";
 
 const WorkCard = ({ image, title, link, desc, addLink }) => {
   return (
@@ -65,21 +65,15 @@ const WorkCard = ({ image, title, link, desc, addLink }) => {
       </div> */}
       </div>
       {addLink && (
-        <p className="d-flex" style={{ cursor: "pointer" }}>
+        <p
+          className="d-flex align-items-center py-0"
+          style={{ cursor: "pointer" }}
+        >
           {" "}
-          <span
-            style={{
-              color: "var(--icon-color)",
-              marginRight: "20px",
-              width: "32px",
-              height: "32px",
-            }}
-          >
-            <FaArrowRight />{" "}
+          <span style={{ marginRight: "20px" }}>
+            <FaArrowRight className="link-icon" />{" "}
           </span>{" "}
-          <span style={{ color: "var(--text-color)", fontWeight: "32px" }}>
-            {title}
-          </span>
+          <span className="link-title">{title}</span>
         </p>
       )}
     </>

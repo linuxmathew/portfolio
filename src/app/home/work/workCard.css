@@ -1,3 +1,27 @@
-.group:hover .description-overlay {
+/* .group:hover .description-overlay {
   opacity: 1 !important;
+} */
+
+.link-title {
+  font-size: 32px;
+  letter-spacing: -0.48px;
+  font-weight: var(--font-weight-semiBold);
+  color: var(--text-color);
+}
+
+.link-icon {
+  color: var(--icon-color);
+  width: 32px;
+  height: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .link-title {
+    font-size: 24px;
+  }
+
+  .link-icon {
+    width: 24px;
+    height: 24px;
+  }
 }
