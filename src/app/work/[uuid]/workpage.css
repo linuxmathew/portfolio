@@ -23,3 +23,14 @@
   width: 20px;
   height: 20px;
 }
+
+.role-title-desc {
+  max-width: 298px;
+}
+
+.project-timeline {
+  /* padding-left: 3rem; */
+}
+
+@media screen and (max-width: 768px) {
+}
