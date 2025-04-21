@@ -1,0 +1,30 @@
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d1d5db; /* Inactive: light gray */
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  border: none;
+  /* background-color: red; */
+}
+
+.carousel__dot:hover {
+  background-color: #c6c6d7; /* Hover: darker gray */
+}
+
+.carousel__dot--active {
+  background-color: #3535e0; /* Active: vibrant blue */
+}
+
+.carousel__dot:focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3); /* Focus ring */
+}

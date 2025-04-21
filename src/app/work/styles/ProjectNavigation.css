@@ -1,0 +1,30 @@
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 2rem; */
+  padding: 1rem 0;
+}
+
+.project-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #2563eb; /* Vibrant blue, matches carousel */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-nav-link:hover {
+  color: #1e40af; /* Darker blue on hover */
+}
+
+.project-nav-link svg {
+  font-size: 1.25rem; /* Slightly larger icons */
+}
+
+.project-nav-link--disabled {
+  color: #d1d5db; /* Gray, matches carousel inactive */
+  pointer-events: none; /* Disable clicks */
+}

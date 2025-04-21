@@ -1,0 +1,75 @@
+.workpage-wrapper {
+  margin-top: 12.3rem;
+}
+
+.work-page-head {
+  margin-bottom: 80px;
+}
+.workpage-title {
+  font-weight: var(--font-weight-bold);
+  font-size: 48px;
+  letter-spacing: -0.72px;
+  margin: 0px 20px 0px 0px;
+}
+
+.work-page-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.role-title-desc {
+  width: 298px;
+}
+
+.text-muted {
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+}
+.text-muted-body {
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  color: var(--resume-headline);
+}
+.work-image-wrapper {
+  margin-top: 5.3125rem;
+}
+.project-desc-wrapper {
+  /* margin-top: 2.75rem; */
+  max-width: 1024px;
+  margin: 2.75rem auto; /* this centers the div */
+}
+.project-desc {
+  font-weight: var(--font-weight-regular);
+  color: var(--text-color-neutral);
+  font-size: 18px;
+  line-height: 30.6px;
+}
+
+@media screen and (max-width: 768px) {
+  .workpage-wrapper {
+    margin-top: 7.1875rem;
+  }
+  .workpage-title {
+    font-size: 30px;
+  }
+  .work-page-head {
+    flex-direction: column;
+  }
+  .workpage-title {
+    margin: 0px 0px 20px 0px;
+  }
+  .role-title-desc {
+    width: 90%;
+  }
+
+  .each-column {
+    margin-bottom: 3.5rem;
+  }
+  .work-image-wrapper {
+    margin-top: 4rem;
+  }
+  .project-desc {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
