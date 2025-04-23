@@ -15,6 +15,7 @@ import ProjectCarousel from "./ProjectCarousel";
 import SectionDivider from "@/app/components/SectionDivider";
 import DemoButton from "../components/DemoBtn";
 import "../styles/ProjectNavigation.css";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const slugs = await getProjectSlugs();

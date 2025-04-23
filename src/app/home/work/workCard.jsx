@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import "./workCard.css";
+import Link from "next/link";
 
-const WorkCard = ({ image, title, link, desc, addLink }) => {
+const WorkCard = ({ image, title, slug, desc, addLink }) => {
   return (
     <>
       <div
@@ -65,16 +66,17 @@ const WorkCard = ({ image, title, link, desc, addLink }) => {
       </div> */}
       </div>
       {addLink && (
-        <p
-          className="d-flex align-items-center py-0"
+        <Link
+          href={`work/${slug}`}
+          className="d-flex align-items-center py-0 text-decoration-none"
           style={{ cursor: "pointer" }}
         >
           {" "}
           <span style={{ marginRight: "20px" }}>
             <FaArrowRight className="link-icon" />{" "}
           </span>{" "}
-          <span className="link-title">{title}</span>
-        </p>
+          <span className="link-title ">{title}</span>
+        </Link>
       )}
     </>
   );
