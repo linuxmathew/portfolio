@@ -1,7 +1,29 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  /* max-width: 800px; Matches your project image width */
+  /* margin: 0 auto; */
+  overflow: hidden; /* Hide overflow for sliding effect */
+}
 .carousel__dots {
   display: flex;
   justify-content: center;
   margin-top: 28px;
+}
+
+.carousel__inner {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease; /* Smooth slide transition */
+}
+.carousel__item {
+  flex: 0 0 100%; /* Each item takes full width */
+  width: 100%;
+}
+.carousel__image {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove inline-block gaps */
 }
 
 .carousel__dot {
@@ -9,10 +31,9 @@
   height: 12px;
   border-radius: 50%;
   background-color: #d1d5db; /* Inactive: light gray */
-  margin: 0 6px;
+  margin: 4px 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
   border: none;
   /* background-color: red; */
 }

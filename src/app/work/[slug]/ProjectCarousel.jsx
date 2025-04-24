@@ -26,13 +26,23 @@ const ProjectCarousel = ({ images }) => {
       role="region"
       aria-label="Image carousel"
     >
-      <Image
-        src={`${images[currentIndex].url}`}
-        alt={images[currentIndex].alt}
-        layout="responsive"
-        width={491}
-        height={4080}
-      />
+      <div
+        className="carousel__inner"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <div className="carousel__item" key={index}>
+            <Image
+              src={image.url}
+              alt={image.alt}
+              layout="responsive"
+              width={491}
+              height={408}
+              className="carousel__image"
+            />
+          </div>
+        ))}
+      </div>
       <div className="carousel__dots">
         {images.map((_, index) => (
           <button
