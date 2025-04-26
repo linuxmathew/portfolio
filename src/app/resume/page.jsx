@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./Resume.css";
 import InfoComponent from "./components/info/infoComponent";
 import Headline from "./components/headline/Headline";
@@ -17,6 +16,8 @@ import {
   experienceArr,
 } from "../../../public/data/resumeData";
 import Link from "next/link";
+import FloatingButton from "./components/floatingBtn";
+import { TbFileDownload } from "react-icons/tb";
 
 const Resume = () => {
   return (
@@ -41,8 +42,8 @@ const Resume = () => {
               title="Core Technologies"
             />
             <div className="row" style={{}}>
-              {coreTechArr.map((arr) => (
-                <CoreTech skill={arr} />
+              {coreTechArr.map((arr, index) => (
+                <CoreTech skill={arr} key={index} />
               ))}
             </div>
           </div>
@@ -91,6 +92,7 @@ const Resume = () => {
           marginBottom: "5.125rem",
         }}
       ></div>
+      <FloatingButton />
     </>
   );
 };

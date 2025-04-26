@@ -1,0 +1,70 @@
+.floatBtn {
+  position: fixed;
+  top: 15%;
+  right: 5%;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--text-color);
+  /* color: #fff; */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); */
+  z-index: 1000;
+}
+
+.floatBtn:hover {
+  background-color: var(--primary-color);
+  color: var(--default-white);
+  border-color: var(--secondary-color);
+}
+
+.resume-float-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* CSS for extra small devices */
+  .floatBtn {
+    top: 9%;
+    right: 5%;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* CSS for small devices */
+  .floatBtn {
+    top: 13%;
+    right: 6%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* CSS for medium devices */
+  .floatBtn {
+    top: 14%;
+    right: 6%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* CSS for large devices */
+  .floatBtn {
+    top: 14%;
+    right: 4.5%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  /* CSS for extra large devices */
+  .floatBtn {
+    top: 14%;
+    right: 4.5%;
+  }
+}

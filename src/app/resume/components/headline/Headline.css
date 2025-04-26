@@ -24,6 +24,7 @@
 }
 .headline {
   margin-left: 2rem;
+  margin-right: 0px;
 }
 @media screen and (max-width: 768px) {
   .headName {

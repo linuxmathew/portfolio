@@ -1,6 +1,6 @@
 import React from "react";
 
-const CoreTech = ({ skill, key }) => {
+const CoreTech = ({ skill }) => {
   return (
     <div
       className="d-flex align-items-center col-6 col-md-12"
