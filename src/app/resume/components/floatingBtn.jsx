@@ -3,14 +3,18 @@ import React from "react";
 import { TbFileDownload } from "react-icons/tb";
 import "./styles/floatingBtn.css";
 
-function FloatingButton() {
-  const handleResumeDownload = () => {
-    console.log("resume downloaded");
-  };
+function FloatingButton({ url }) {
   return (
-    <button className="floatBtn" onClick={handleResumeDownload}>
-      <TbFileDownload className="resume-float-icon" />
-    </button>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none" }} // optional, to remove link underline
+    >
+      <button className="floatBtn">
+        <TbFileDownload className="resume-float-icon" />
+      </button>
+    </a>
   );
 }
 

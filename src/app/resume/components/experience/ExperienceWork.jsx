@@ -1,9 +1,9 @@
 import React from "react";
 import "./ExperienceWork.css";
 
-const ExperienceWork = ({ key, companyName, location, title, date, works }) => {
+const ExperienceWork = ({ companyName, location, title, date, works }) => {
   return (
-    <div style={{ marginBottom: "3rem" }} key={key}>
+    <div style={{ marginBottom: "3rem" }}>
       <div className="companyInfo">
         <span
           style={{
@@ -26,8 +26,8 @@ const ExperienceWork = ({ key, companyName, location, title, date, works }) => {
         <i className="expDate">{date}</i>
       </div>
 
-      {works.map((work) => (
-        <div className="workDescWrap" key={work.id}>
+      {works.map((work, index) => (
+        <div className="workDescWrap" key={index}>
           <div
             className="d-flex align-items-start"
             style={{ marginBottom: "8px" }}
@@ -41,7 +41,7 @@ const ExperienceWork = ({ key, companyName, location, title, date, works }) => {
                 backgroundColor: "var(--shoot-up-arrow)",
               }}
             ></span>
-            <span className="descBody">{work.workDesc}</span>
+            <span className="descBody">{work}</span>
           </div>
         </div>
       ))}

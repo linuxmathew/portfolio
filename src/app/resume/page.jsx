@@ -17,9 +17,16 @@ import {
 } from "../../../public/data/resumeData";
 import Link from "next/link";
 import FloatingButton from "./components/floatingBtn";
-import { TbFileDownload } from "react-icons/tb";
+import { getResumeData } from "./services/fetchResumeData";
 
-const Resume = () => {
+const Resume = async () => {
+  const resume = await getResumeData();
+  const { title = "", experiences = [], pdfUrl = "" } = resume;
+  const desc = resume.description[0].children[0].text;
+
+  if (!resume) {
+    return <div>No resume data found</div>;
+  }
   return (
     <>
       <div className="two-column-section2">
@@ -50,37 +57,37 @@ const Resume = () => {
           <ResumeDivider />
           <div className="container-md infoSection">
             <ContentHead icon="/images/graduation-hat.svg" title="Education" />
-            {eduArr.map((edu) => (
+            {eduArr.map((edu, index) => (
               <EducationSection
+                key={index}
                 course={edu.course}
                 school={edu.school}
                 date={edu.date}
-                key={edu.id}
               />
             ))}
           </div>
         </div>
         <div className="column2 column-right2">
-          <Headline />
+          <Headline title={title} description={desc} />
           <ResumeDivider />
           <div className=" headline container-md ">
             <ContentHead icon="/images/briefcase-02.svg" title="Experience" />
-            {experienceArr.map((exp) => (
+            {experiences.map((exp, index) => (
               <ExperienceWork
-                key={exp.id}
-                companyName={exp.companyName}
+                key={index}
+                companyName={exp.company}
                 location={exp.location}
-                title={exp.title}
-                date={exp.date}
-                works={exp.works}
+                title={exp.role}
+                date={exp.period}
+                works={exp.description}
               />
             ))}
 
             <ContentHead icon="/images/terminal-browser.svg" title="Projects" />
             <p className="projectDesc">
               Links to some of my work can be found on{" "}
-              <Link href="/work">temitayoafolabi.com/work</Link> and details can
-              be provided upon request via a scheduled demo call.
+              <Link href="/work">temitayoh.dev/work</Link> and details can be
+              provided upon request via a scheduled demo call.
             </p>
           </div>
         </div>
@@ -92,7 +99,7 @@ const Resume = () => {
           marginBottom: "5.125rem",
         }}
       ></div>
-      <FloatingButton />
+      <FloatingButton url={pdfUrl} />
     </>
   );
 };

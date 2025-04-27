@@ -4,38 +4,6 @@ import WorkCard from "../home/work/workCard";
 import { getAllProjects } from "./services/fetchAllProducts";
 
 export default async function Work() {
-  // const projects = [
-  //   {
-  //     id: 1,
-  //     image: "/images/project1.png", // Ensure the public folder in Next.js
-  //     title: "Klakpad Sella",
-  //     link: "https://example.com/research-gains",
-  //     desc: "This is a brief description of the project consectetur. Varius blandit facilisis egestas nulla tristique.  sit amet consectetur. blandit facilisis egestas sit amet consectetur facilisis egestas nulla consectetur.  blandit facilisis egestas nulla tristique. ",
-  //   },
-
-  //   {
-  //     id: 2,
-  //     image: "/images/project3.png", // Ensure the public folder in Next.js
-  //     title: "Klakpad website",
-  //     link: "https://example.com/research-gains",
-  //     desc: "This is a brief description of the project consectetur. Varius blandit facilisis egestas nulla tristique.  sit amet consectetur. blandit facilisis egestas sit amet consectetur facilisis egestas nulla consectetur.  blandit facilisis egestas nulla tristique.  ",
-  //   },
-  //   {
-  //     id: 3,
-  //     image: "/images/project4.png",
-  //     title: "ResearchGains",
-  //     link: "https://example.com/fyuur",
-  //     desc: "This is a brief description of the project consectetur. Varius blandit facilisis egestas nulla tristique.  sit amet consectetur. blandit facilisis egestas sit amet consectetur facilisis egestas nulla consectetur.  blandit facilisis egestas nulla tristique.  ",
-  //   },
-  //   {
-  //     id: 4,
-  //     image: "/images/project2.gif",
-  //     title: "Fyuur",
-  //     link: "https://example.com/fyuur",
-  //     desc: "This is a brief description of the project consectetur. Varius blandit facilisis egestas nulla tristique.  sit amet consectetur. blandit facilisis egestas sit amet consectetur facilisis egestas nulla consectetur.  blandit facilisis egestas nulla tristique.  ",
-  //   },
-  //   // Add more projects here
-  // ];
   const projects = await getAllProjects();
   return (
     <>
