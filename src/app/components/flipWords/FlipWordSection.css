@@ -1,0 +1,30 @@
+.flip-content {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--flip-word-body);
+  line-height: 52.8px;
+  letter-spacing: -0.72px;
+  margin-bottom: 1rem;
+}
+
+.flip-word {
+  color: var(--resume-headline);
+}
+.flip-desc {
+  color: var(--text-color);
+  font-weight: var(--font-weight-regular);
+  font-size: 18px;
+  line-height: 28.8px;
+}
+
+@media screen and (max-width: 768px) {
+  .flip-content {
+    font-size: 1.875rem;
+    line-height: 33px;
+    letter-spacing: -0.45px;
+  }
+  .flip-desc {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+}

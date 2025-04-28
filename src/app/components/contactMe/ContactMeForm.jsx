@@ -9,7 +9,7 @@ const ContactMeForm = () => {
     <div className="container-md" style={{}}>
       <div className="mx-auto d-flex justify-content-center ">
         <div className="form-wrapper px-auto">
-          <p className="formHead text-center">Send me a message</p>
+          <p className="formHead text-center">Let’s work together</p>
           <p className="formDesc text-center">
             Got a question or proposal, or just want to say hello? Go ahead.
           </p>
