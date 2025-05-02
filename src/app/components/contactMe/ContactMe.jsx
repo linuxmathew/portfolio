@@ -8,8 +8,8 @@ const ContactMeFooter = () => {
         // height: "300px",
         paddingTop: "96px",
         paddingBottom: "96px",
-        backgroundColor: "var(--text-color)",
-        color: "var(--text-color)",
+        backgroundColor: "var(--footer-background)",
+        // color: "var(--footer-background)",
       }}
     >
       <ContactMeForm />

@@ -33,6 +33,7 @@ body {
   --secondary-color: #eaeaea;
   --resume-headline: #13132f;
   --flip-word-body: #5d5d78;
+  --footer-background: #141c2f;
 }
 
 [data-theme="dark"] {
@@ -50,6 +51,7 @@ body {
   --shoot-up-arrow: #fdfdff;
   --resume-headline: #fdfdff;
   --flip-word-body: #a1a1a1;
+  --footer-background: #141c2f;
 }
 
 @theme inline {
