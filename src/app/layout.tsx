@@ -31,6 +31,14 @@ export default function RootLayout({
         <main>{children}</main>
         <LetsWork />
         <div style={{ marginTop: "4.25rem" }}></div>
+        <SectionDivider
+          isDefault={false}
+          style={{
+            marginBottom: "0px",
+            borderBottom: "1px solid #aaaadd",
+            marginTop: "4.25rem",
+          }}
+        />
         <ContactMeFooter />
       </body>
     </html>
