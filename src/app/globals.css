@@ -34,6 +34,7 @@ body {
   --resume-headline: #13132f;
   --flip-word-body: #5d5d78;
   --footer-background: #141c2f;
+  --footer-heading: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -52,6 +53,7 @@ body {
   --resume-headline: #fdfdff;
   --flip-word-body: #a1a1a1;
   --footer-background: #141c2f;
+  --footer-heading: #ffffff;
 }
 
 @theme inline {

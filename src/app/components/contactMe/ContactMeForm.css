@@ -29,7 +29,7 @@
 .formHead {
   font-size: 40px;
   font-weight: var(--font-weight-bold);
-  color: var(--bg-color);
+  color: var(--footer-heading);
 }
 .formDesc {
   font-size: 18px;
@@ -46,5 +46,8 @@
   }
   .flex-wrapper {
     flex-direction: column;
+  }
+  .formHead {
+    font-size: 30px;
   }
 }
