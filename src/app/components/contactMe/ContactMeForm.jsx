@@ -64,7 +64,7 @@ const ContactMeForm = () => {
             ></textarea>
           </div>
           <div className="text-center" style={{ marginTop: "4rem" }}>
-            <UniversalBtn>
+            <UniversalBtn fadeBorder>
               Send away{" "}
               <FiArrowUpRight
                 className=""
