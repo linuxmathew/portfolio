@@ -19,7 +19,7 @@ const ContactMeForm = () => {
                 style={{ color: "#86869B" }}
                 htmlFor="exampleFormControlInput1"
               >
-                Your name
+                Your Name
               </label>
               <input
                 type="email"
