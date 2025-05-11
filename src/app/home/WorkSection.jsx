@@ -22,7 +22,7 @@ const WorkSection = () => {
       desc: "This is a brief description of the project consectetur. Varius blandit facilisis egestas nulla tristique.  sit amet consectetur. blandit facilisis egestas sit amet consectetur facilisis egestas nulla consectetur.  blandit facilisis egestas nulla tristique. ",
     },
     {
-      image: "/images/project2.gif",
+      image: "/images/project1.png",
       title: "Fyuur",
       link: "https://example.com/fyuur",
       desc: "This is a brief description of the project consectetur. Varius blandit facilisis egestas nulla tristique.  sit amet consectetur. blandit facilisis egestas sit amet consectetur facilisis egestas nulla consectetur.  blandit facilisis egestas nulla tristique.  ",

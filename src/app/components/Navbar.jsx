@@ -1,42 +1,38 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./Navbar.css";
 import UniversalBtn from "./buttons/UniversalBtn";
+import React from "react";
 
-export default function Navbar() {
+export default React.memo(function Navbar() {
   const [theme, setTheme] = useState("light");
   const [isOpen, setIsOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState(""); // Store the path after hydration
-  const pathname = usePathname(); // Get the current path
-
-  useEffect(() => {
-    setCurrentPath(pathname); // Ensure it's set on the client
-  }, [pathname]);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      return newTheme;
+    });
   };
 
-  // Define pages
   const pages = ["home", "work", "resume", "shelf"];
+  // Extract the first segment of the pathname
   const currentPage =
-    currentPath === "/" ? "home" : currentPath.replace("/", "");
-
-  // Filter pages but ensure Home is included if not already on it
-  const filteredPages = pages.filter((page) => page !== currentPage);
+    pathname === "/" ? "home" : pathname.split("/")[1] || "home";
+  const filteredPages = useMemo(() => {
+    return pages.filter((page) => page !== currentPage);
+  }, [currentPage]);
 
   return (
-    <nav style={styles.navbar} className="navbar">
+    <nav className="navbar fixed top-0 left-0 w-full z-[1000] flex justify-between items-center p-4 bg-[var(--bg-color)] text-[var(--text-color)] shadow-md border-b border-[#aaaadd]">
       <div className="container-md">
         <div className="navbar-logo">
           <Link href="/">
@@ -46,12 +42,10 @@ export default function Navbar() {
               alt="Logo"
               width={50}
               height={50}
-              priority
             />
           </Link>
         </div>
 
-        {/* Dynamic Navbar Menu */}
         <ul className={`navbar-menu ${isOpen ? "active" : ""}`}>
           {filteredPages.map((page) => (
             <li key={page}>
@@ -66,13 +60,15 @@ export default function Navbar() {
         </ul>
 
         <div className="navbar-actions">
-          <button onClick={toggleTheme} style={styles.themeButton}>
+          <button
+            onClick={toggleTheme}
+            className="bg-none border-none cursor-pointer text-[1.5rem] text-[var(--text-color)] mr-8 h-8 w-8"
+          >
             {theme === "light" ? <FaMoon /> : <FaSun />}
           </button>
           <UniversalBtn type="primary">Contact me</UniversalBtn>
         </div>
 
-        {/* Hamburger Menu for Small Screens */}
         <div className="navbar-toggle" onClick={toggleMenu}>
           <span className="hamburger"></span>
           <span className="hamburger"></span>
@@ -81,32 +77,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
-
-const styles = {
-  navbar: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100%",
-    zIndex: "1000",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "1rem",
-    backgroundColor: "var(--bg-color)",
-    color: "var(--text-color)",
-    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-    borderBottom: "1px solid #aaaadd",
-  },
-  themeButton: {
-    background: "none",
-    border: "none",
-    cursor: "pointer",
-    fontSize: "1.5rem",
-    color: "var(--text-color)",
-    marginRight: "2rem",
-    height: "32px",
-    width: "32px",
-  },
-};
+});

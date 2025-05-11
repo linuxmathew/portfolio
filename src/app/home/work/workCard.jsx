@@ -22,7 +22,8 @@ const WorkCard = ({ image, title, slug, desc, addLink }) => {
           alt={title}
           width={330}
           height={250}
-          layout="responsive"
+          // layout="responsive"
+          style={{ width: "100%", height: "auto" }}
           className="object-cover w-full h-60 transition-opacity duration-300 group-hover:opacity-20"
         />
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { Schibsted_Grotesk } from "next/font/google"; // Import the font
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
@@ -6,6 +7,7 @@ import Navbar from "./components/Navbar";
 import LetsWork from "./components/workTogether/letsWork";
 import ContactMeFooter from "./components/contactMe/ContactMe";
 import SectionDivider from "./components/SectionDivider";
+import NProgressWrapper from "./components/progressbar/progressWrapper";
 
 // Configure Schibsted Grotesk
 const schibstedGrotesk = Schibsted_Grotesk({
@@ -16,7 +18,7 @@ const schibstedGrotesk = Schibsted_Grotesk({
 
 export const metadata: Metadata = {
   title: "Temitayo",
-  description: "Temitayo Afolabi Software engineer",
+  description: "Software Engineer",
 };
 
 export default function RootLayout({
@@ -27,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={schibstedGrotesk.className}>
+        <NProgressWrapper />
         <Navbar />
         <main>{children}</main>
         <LetsWork />

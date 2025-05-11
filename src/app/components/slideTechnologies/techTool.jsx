@@ -1,32 +1,25 @@
 import React from "react";
-import { BiSolidBookContent, BiSolidFileCss } from "react-icons/bi";
-import { FaNodeJs, FaPython, FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import {
-  SiBootstrap,
-  SiC,
-  SiElectron,
-  SiFlask,
-  SiSanity,
-} from "react-icons/si";
-import { TiHtml5 } from "react-icons/ti";
+import * as BiIcons from "react-icons/bi";
+import * as FaIcons from "react-icons/fa";
+import * as IoIcons from "react-icons/io";
+import * as SiIcons from "react-icons/si";
+import * as TiIcons from "react-icons/ti";
 
 const iconMap = {
-  BiSolidFileCss: BiSolidFileCss,
-  FaPython: FaPython,
-  IoLogoJavascript: IoLogoJavascript,
-  SiFlask: SiFlask,
-  FaNodeJs: FaNodeJs,
-  FaReact: FaReact,
-  TiHtml5: TiHtml5,
-  BiSolidBookContent: BiSolidBookContent,
-  SiC: SiC,
-  SiElectron: SiElectron,
-  SiSanity: SiSanity,
-  SiBootstrap: SiBootstrap,
+  BiSolidFileCss: BiIcons.BiSolidFileCss,
+  FaPython: FaIcons.FaPython,
+  IoLogoJavascript: IoIcons.IoLogoJavascript,
+  SiFlask: SiIcons.SiFlask,
+  FaNodeJs: FaIcons.FaNodeJs,
+  SiBootstrap: SiIcons.SiBootstrap,
+  FaReact: FaIcons.FaReact,
+  TiHtml5: TiIcons.TiHtml5,
+  BiSolidBookContent: BiIcons.BiSolidBookContent,
+  SiC: SiIcons.SiC,
+  SiElectron: SiIcons.SiElectron,
+  SiSanity: SiIcons.SiSanity,
 };
 const TechTool = ({ tool }) => {
-  console.log("tool.iconName:", tool.iconName);
   const IconComponent = iconMap[tool.iconName];
   return (
     <span
@@ -38,7 +31,7 @@ const TechTool = ({ tool }) => {
         justifyContent: "center", // Center horizontally
       }}
     >
-      {tool.iconName && (
+      {IconComponent && (
         <IconComponent
           // className="bg-danger"
           style={{

@@ -3,6 +3,32 @@ import React from "react";
 import "./Hero.css";
 import UniversalBtn from "../../components/buttons/UniversalBtn";
 import { FiArrowUpRight } from "react-icons/fi";
+import {
+  TypewriterEffect,
+  TypewriterEffectSmooth,
+} from "../../../app/components/typewriter/typewritter";
+
+const words = [
+  {
+    text: "a",
+    className: "", // Optional: custom class for this word
+  },
+  {
+    text: " ",
+  },
+
+  {
+    text: "Software",
+    className: "", // Optional: custom class for this word
+  },
+  {
+    text: " ",
+  },
+  {
+    text: "Engineer",
+    className: "", // Optional: custom class for this word
+  },
+];
 
 const Hero = () => {
   return (
@@ -15,7 +41,18 @@ const Hero = () => {
           <div className="hero-title">
             Hi, I’m{" "}
             <span style={{ color: "var(--primary-color)" }}>Temitayo</span>,{" "}
-            <br />a Software Engineer
+            {/* <br />a{" "} */}
+            <TypewriterEffectSmooth
+              words={words}
+              className="mt-8" // Optional: custom class for the container
+              cursorClassName="bg-purple-500" // Optional: custom class for the cursor
+            />
+            <TypewriterEffect
+              words={words}
+              className="custom-class" // Optional: custom class for the container
+              cursorClassName="bg-red-500" // Optional: custom class for the cursor
+            />
+            {/* Using TypewriterEffectSmooth */}
           </div>
           <span
             style={{
@@ -66,6 +103,7 @@ const Hero = () => {
               width={491}
               height={4080}
               className="hero-image"
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
         </div>
