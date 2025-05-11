@@ -62,7 +62,7 @@ export default React.memo(function Navbar() {
         <div className="navbar-actions">
           <button
             onClick={toggleTheme}
-            className="bg-none border-none cursor-pointer text-[1.5rem] text-[var(--text-color)] mr-8 h-8 w-8"
+            className="mode-btn bg-none border-none cursor-pointer text-[1.5rem] text-[var(--text-color)] mr-8 h-8 w-8"
           >
             {theme === "light" ? <FaMoon /> : <FaSun />}
           </button>

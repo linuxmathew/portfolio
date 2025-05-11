@@ -10,13 +10,8 @@ import {
 
 const words = [
   {
-    text: "a",
-    className: "", // Optional: custom class for this word
-  },
-  {
     text: " ",
   },
-
   {
     text: "Software",
     className: "", // Optional: custom class for this word
@@ -41,19 +36,16 @@ const Hero = () => {
           <div className="hero-title">
             Hi, I’m{" "}
             <span style={{ color: "var(--primary-color)" }}>Temitayo</span>,{" "}
-            {/* <br />a{" "} */}
-            <TypewriterEffectSmooth
-              words={words}
-              className="mt-8" // Optional: custom class for the container
-              cursorClassName="bg-purple-500" // Optional: custom class for the cursor
-            />
-            <TypewriterEffect
-              words={words}
-              className="custom-class" // Optional: custom class for the container
-              cursorClassName="bg-red-500" // Optional: custom class for the cursor
-            />
-            {/* Using TypewriterEffectSmooth */}
+            <div className="d-flex py-0">
+              a
+              <TypewriterEffectSmooth
+                words={words}
+                className="mt-0" // Optional: custom class for the container
+                cursorClassName="bg-purple-500" // Optional: custom class for the cursor
+              />
+            </div>
           </div>
+
           <span
             style={{
               fontSize: "16px",

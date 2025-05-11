@@ -28,6 +28,10 @@
   gap: 15px;
 }
 
+.mode-btn {
+  background-color: transparent;
+}
+
 /* Theme Toggle Button */
 .theme-toggle {
   background: none;

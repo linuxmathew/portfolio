@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import { Schibsted_Grotesk } from "next/font/google"; // Import the font
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
