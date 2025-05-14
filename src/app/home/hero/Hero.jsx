@@ -89,13 +89,13 @@ const Hero = () => {
         <div className="col col-12 col-md-5">
           <div className="image-wrapper">
             <Image
-              src="/images/actor.svg"
+              src="/images/actor3.jpeg"
               alt="Actor Illustration"
               // layout="responsive"
               width={491}
               height={4080}
               className="hero-image"
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "100%", height: "auto", borderRadius: "20px" }}
             />
           </div>
         </div>
