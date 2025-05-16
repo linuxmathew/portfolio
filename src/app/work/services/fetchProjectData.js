@@ -2,7 +2,7 @@ import { sanityClient } from "../../../lib/sanity";
 
 // Fetch all project slugs for generateStaticParams
 export async function getProjectSlugs() {
-  console.log("incoming1");
+  // console.log("incoming1");
   try {
     const projects = await sanityClient.fetch(
       `*[_type == "project" && defined(slug.current)][]{
