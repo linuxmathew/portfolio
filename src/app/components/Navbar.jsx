@@ -32,13 +32,15 @@ export default React.memo(function Navbar() {
   }, [currentPage]);
 
   return (
-    <nav className="navbar fixed top-0 left-0 w-full z-[1000] flex justify-between items-center p-4 bg-[var(--bg-color)] text-[var(--text-color)] shadow-md border-b border-[#aaaadd]">
+    <nav className="navbar w-full ">
       <div className="container-md">
         <div className="navbar-logo">
           <Link href="/">
             <Image
               className="logo-img"
-              src="/images/logo.svg"
+              src={
+                theme === "light" ? "/images/logo.svg" : "/images/logo_dark.svg"
+              }
               alt="Logo"
               width={50}
               height={50}

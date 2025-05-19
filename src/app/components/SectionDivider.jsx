@@ -6,7 +6,7 @@ const SectionDivider = ({ style, isDefault }) => {
       style={
         isDefault
           ? {
-              borderBottom: "1px solid #aaaadd",
+              borderBottom: "1px solid var(--main-border-divider)",
               marginBottom: "4.25rem",
               marginTop: "4.25rem",
             }

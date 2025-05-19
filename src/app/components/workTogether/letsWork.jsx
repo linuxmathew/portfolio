@@ -11,14 +11,14 @@ const LetsWork = () => {
   return (
     <div className="container-md">
       <div className="row justify-content-between  align-items-center">
-        <div className="col col-12 col-md-5 pe-0 pe-md-5 mb-5 mb-md-0">
+        <div className="col col-12 col-lg-5 pe-0 pe-lg-5 mb-5 mb-lg-0">
           <FlipWordSection />
           <div style={{ marginTop: "2rem" }}></div>
           <UniversalBtn>
             temfoden@gmail.com <FiArrowUpRight className="ms-1" />
           </UniversalBtn>
         </div>
-        <div className="col col-12 col-md-6 ms-0 ps-md-5">
+        <div className="col col-12 col-lg-6 ms-0 ps-lg-5">
           <div className="d-flex ">
             <span style={{ marginRight: "24px" }}>
               <UniversalBtn type="primary" fadeBorder>

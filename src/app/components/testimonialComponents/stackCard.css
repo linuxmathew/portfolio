@@ -1,0 +1,43 @@
+.card-stack-container {
+  position: relative;
+  margin: 0 auto;
+  z-index: 1; /* Add this to keep it below other layers if needed */
+}
+
+.card-stack-card {
+  position: absolute;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--testimonial-bg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--testimonial-bg-border); /* zinc-200 */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform-origin: top center;
+  color: var(--testimonial-text);
+}
+
+.card-quote {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  /* color: #444; */
+}
+
+.card-footer {
+  margin-top: 1rem;
+}
+
+.card-name {
+  font-weight: 500;
+
+  margin: 0px;
+}
+
+.card-title {
+  font-weight: 400;
+  font-size: 0.9rem;
+  /* color: #888; */
+}

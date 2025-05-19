@@ -28,9 +28,9 @@ const words = [
 const Hero = () => {
   return (
     <div className="hero-wrapper">
-      <div className="row g-5">
+      <div className="row g-lg-5">
         <div
-          className="col col-12 col-md-7"
+          className="col col-12 col-lg-7"
           style={{ fontWeight: "var( --font-weight-bold)" }}
         >
           <div className="hero-title">
@@ -86,7 +86,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="col col-12 col-md-5">
+        <div className="col col-12 col-lg-5">
           <div className="image-wrapper">
             <Image
               src="/images/actor3.jpeg"

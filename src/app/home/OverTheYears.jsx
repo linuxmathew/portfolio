@@ -14,9 +14,9 @@ const OverTheYears = () => {
   return (
     <div className="container-md">
       <div className="row">
-        <div className="col col-12 col-md-6">
+        <div className="col col-12 col-lg-6">
           <SectionHead secHead1="WORK EXPERIENCE" secHead2="Over the years" />
-          <p className="justItDesc">
+          <p className="justItDesc pe-lg-5">
             {/* From my first spark of curiosity in network infrastructure to
             designing seamless user experiences in modern web apps, my journey
             as a software engineer has been anything but conventional. I started
@@ -29,7 +29,7 @@ const OverTheYears = () => {
             learning how tech meets everyday needs. It wasn’t flashy, but it
             taught me the value of solid groundwork and practical thinking.
           </p>
-          <p className="justItDesc">
+          <p className="justItDesc pe-lg-5">
             {/* The pace quickened when I joined ResearchGains. There, I stepped
             into leadership—driving frontend development, building highly
             responsive interfaces, and implementing automated workflows that
@@ -42,7 +42,7 @@ const OverTheYears = () => {
             made a real difference. It was here I learned that great code isn’t
             just functional; it’s thoughtful and user-focused.
           </p>
-          <p className="justItDesc">
+          <p className="justItDesc pe-lg-5">
             {/* Today at Klakpad, I engineer enterprise-grade software used by
             thousands across Nigeria. Whether it's managing inventory,
             processing sales, or simplifying customer relations, I build tools
@@ -60,11 +60,11 @@ const OverTheYears = () => {
             My resume <FiArrowUpRight className="ms-1" />
           </UniversalBtn>
           <div
-            className="d-block d-md-none"
+            className="d-block d-lg-none"
             style={{ marginTop: "3rem" }}
           ></div>
         </div>
-        <div className="col col-12 col-md-6">
+        <div className="col col-12 col-lg-6">
           <div className="image-layout">
             <div className="large-image">
               <Image

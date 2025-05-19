@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 
 export default async function ProjectPage({ params }) {
   // Log params for debugging
-  const { slug } = params;
+  const { slug } = await params;
 
   // Validate params.slug
   if (!slug || typeof slug !== "string") {
@@ -38,7 +38,7 @@ export default async function ProjectPage({ params }) {
 
   // Fetch all projects for navigation
   const allProjects = await getAllProjectsNavigation();
-  const currentIndex = allProjects.findIndex((p) => p.slug === params.slug);
+  const currentIndex = allProjects.findIndex((p) => p.slug === slug);
   const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
   const nextProject =
     currentIndex < allProjects.length - 1

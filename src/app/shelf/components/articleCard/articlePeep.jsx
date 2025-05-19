@@ -3,14 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ArticlePeep = ({ article }) => {
-  const { date, readTime, head, tip, lead, img, id } = article;
+  const { publishedAt, readTime, title, tip, excerpt, image, slug } = article;
+
+  const date = new Date(publishedAt).toISOString().split("T")[0];
+  console.log("article", article);
 
   return (
     <Link
-      href={`/shelf/${id}`}
+      href={`/shelf/${slug}`}
       style={{ textDecoration: "none", color: "inherit" }}
     >
-      <div key={id} className="row" style={{ cursor: "pointer" }}>
+      <div key={slug} className="row" style={{ cursor: "pointer" }}>
         <div className="colLeftSide col col-12 col-md-8 ">
           <div className="dateAndTime d-flex">
             <span
@@ -33,18 +36,19 @@ const ArticlePeep = ({ article }) => {
               {readTime} min read
             </span>
           </div>
-          <p className="displayHeading">{head}</p>
+          <p className="displayHeading">{title}</p>
           {tip && <i className="articleTips">{tip}</i>}
 
-          <p className="articleLead">{lead}</p>
+          <p className="articleLead">{excerpt}</p>
         </div>
         <div className="col">
           <Image
-            src={img}
+            src={image}
             alt=""
-            layout="responsive"
-            width={300}
-            height={200}
+            // layout="responsive"
+            width={350}
+            height={250}
+            style={{ width: "100%", height: "auto", borderRadius: "8px" }}
           />
         </div>
       </div>
