@@ -5,7 +5,7 @@ const ResumeDivider = () => {
     <div
       className=" "
       style={{
-        borderTop: "1px solid #aaaadd",
+        borderTop: "1px solid var(--main-border-divider)",
         marginBottom: "2.9375rem",
         marginTop: "2.9375rem",
       }}
