@@ -1,7 +1,6 @@
 import { sanityClient } from "../../../lib/sanity";
 
 export async function getArticleBySlug(slug) {
-  console.log("incoming", slug);
   if (!slug || typeof slug !== "string" || slug.trim() === "") {
     return null;
   }
