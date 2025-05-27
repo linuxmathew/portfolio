@@ -1,8 +1,8 @@
 /* Navbar Container */
 .navbar {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   padding: 10px 0px;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -100,27 +100,35 @@
   cursor: pointer;
 }
 
-.hamburger {
-  width: 25px;
-  height: 3px;
-  background-color: var(--text-color);
-  transition: background-color 0.3s ease;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
+  .navbar-menu {
+    display: block;
+
+    /* justify-content: flex-start; Align navbar content to the left */
+  }
+  .navbar-menu li {
+    margin: 64px;
+
+    /* justify-content: flex-start; Align navbar content to the left */
+  }
+  .navbar-menu li Link {
+    font-size: 24px; /* Adjust font size for smaller screens */
+    font-weight: var(--font-weight-medium);
+    /* justify-content: flex-start; Align navbar content to the left */
+  }
   .navbar-actions {
     display: none; /* Hide theme toggle + contact button on small screens */
   }
 
   .logo-img {
-    max-width: 120px; /* Size for tablets */
+    max-width: 81.33px; /* Size for tablets */
   }
   .navbar-menu {
     display: none; /* Hidden by default on small screens */
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust based on your navbar height */
+    top: 48px; /* Adjust based on your navbar height */
     right: 0;
     background-color: var(--bg-color);
     width: 100%; /* Full width for dropdown */
@@ -130,11 +138,24 @@
   }
 
   .navbar-menu.active {
-    display: flex; /* Show when toggled */
+    display: block; /* Show when toggled */
+    background-color: var(--bg-color);
+    height: 100vh; /* Full height for dropdown */
   }
 
   .navbar-toggle {
     display: flex; /* Show hamburger icon on small screens */
+    /* background-color: BLUE; */
+    flex-direction: row;
+    gap: 28px;
+    align-items: center;
+  }
+  .navbar-toggle.btn {
+    border: none;
+  }
+
+  .theme-toggler {
+    color: var(--text-color);
   }
 
   .navbar-menu .contact-small {
