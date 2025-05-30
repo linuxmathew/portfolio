@@ -37,7 +37,7 @@ export default function RootLayout({
           isDefault={false}
           style={{
             marginBottom: "0px",
-            borderBottom: "1px solid #aaaadd",
+            borderBottom: "1px solid var(--main-border-divider)",
             marginTop: "4.25rem",
           }}
         />
