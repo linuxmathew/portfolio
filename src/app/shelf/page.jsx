@@ -6,7 +6,6 @@ import { getAllArticles } from "./services/fetchAllArticles";
 
 export default async function Shelf() {
   const articles = await getAllArticles();
-  console.log("incos", articles);
 
   if (!articles || articles.length === 0) {
     return (
