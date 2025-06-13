@@ -93,7 +93,7 @@ const Resume = async () => {
         </div>
       </div>
       <div
-        className="mt-0 d-none d-md-block"
+        className="mt-0  d-md-block"
         style={{
           borderTop: "1px solid var(--main-border-divider)",
           marginBottom: "5.125rem",

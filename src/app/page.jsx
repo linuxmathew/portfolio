@@ -50,7 +50,10 @@ export default function Home() {
       <BuildRead />
       <div
         className="d-block d-md-none"
-        style={{ borderBottom: "1px solid #aaaadd", marginBottom: "4.25rem" }}
+        style={{
+          borderBottom: "1px solid var(--main-border-divider)",
+          marginBottom: "4.25rem",
+        }}
       ></div>
       <WorkSection />
       <SectionDivider isDefault />

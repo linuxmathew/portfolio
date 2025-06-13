@@ -31,7 +31,7 @@
   bottom: 0;
   left: 50%;
   width: 1px;
-  background-color: #aaaadd; /* Faint line color */
+  background-color: var(--main-border-divider); /* Faint line color */
   transform: translateX(-50%);
   z-index: -1;
 }
@@ -76,7 +76,7 @@
 
   /* Add horizontal divider between stacked columns */
   .column-left {
-    border-bottom: 1px solid #aaaadd; /* Horizontal line between the columns */
+    border-bottom: 1px solid var(--main-border-divider); /* Horizontal line between the columns */
     padding-bottom: 3.25rem; /* Add some space below the line */
   }
 

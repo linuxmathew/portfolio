@@ -12,7 +12,7 @@ const BuildRead = () => {
       <div
         className="mb-0 d-none d-md-block"
         style={{
-          borderTop: "1px solid #aaaadd",
+          borderTop: "1px solid var(--main-border-divider)",
           marginTop: "5.125rem",
         }}
       ></div>
@@ -49,7 +49,7 @@ const BuildRead = () => {
       <div
         className="mt-0 d-none d-md-block"
         style={{
-          borderTop: "1px solid #aaaadd",
+          borderTop: "1px solid var(--main-border-divider)",
           marginBottom: "5.125rem",
         }}
       ></div>

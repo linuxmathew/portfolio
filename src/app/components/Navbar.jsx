@@ -71,21 +71,7 @@ export default React.memo(function Navbar() {
             </li>
           ))}
           <span className="d-md-none" style={{}}>
-            <button
-              className=""
-              onClick={() => {}}
-              style={{
-                border: "1px solid var(--text-color)",
-                width: "100%",
-                backgroundColor: "transparent",
-                color: "var(--text-color)",
-                borderRadius: "20px",
-                padding: "12px 16px",
-                fontSize: "16px",
-                fontWeight: "var(--font-weight-medium)",
-                marginTop: "64px",
-              }}
-            >
+            <button className="dropdown-contact-btn" onClick={() => {}}>
               Contact me
             </button>
           </span>
@@ -111,7 +97,11 @@ export default React.memo(function Navbar() {
 
         <div className="navbar-toggle">
           {!isOpen && (
-            <button onClick={toggleTheme} className="btn border-none">
+            <button
+              onClick={toggleTheme}
+              className="btn border-none"
+              style={{ padding: "0px" }}
+            >
               {theme === "light" ? (
                 <FaMoon
                   className="theme-toggler"
