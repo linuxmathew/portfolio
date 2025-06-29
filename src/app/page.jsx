@@ -30,7 +30,7 @@ const testimonials = [
     quote:
       "Every team needs a Tayo. Adaptable, solution-oriented, and always willing to jump in where needed. They’re the kind of teammate who makes others better just by being on the project.",
     name: "Omiwole Temitope",
-    title: "Fullstack Engineer, Klakpad",
+    title: "Backend Lead, ResearchGains",
   },
   {
     quote:
