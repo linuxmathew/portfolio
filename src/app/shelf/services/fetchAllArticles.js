@@ -13,6 +13,7 @@ export async function getAllArticles() {
             tip
             }`
     );
+    // console.log("incoming articles", articles);
     return articles;
   } catch (error) {
     console.error("Error fetching all articles:", error);
