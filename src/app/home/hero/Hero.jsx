@@ -7,6 +7,9 @@ import {
   TypewriterEffect,
   TypewriterEffectSmooth,
 } from "../../../app/components/typewriter/typewritter";
+import { IoCodeSlashOutline } from "react-icons/io5";
+import { RiBookLine } from "react-icons/ri";
+import { HiOutlinePencilSquare } from "react-icons/hi2";
 
 const words = [
   {
@@ -30,7 +33,7 @@ const Hero = () => {
     <div className="hero-wrapper">
       <div className="row g-lg-5">
         <div
-          className="col col-12 col-lg-7"
+          className="col col-12 col-lg-7 hero"
           style={{ fontWeight: "var( --font-weight-bold)" }}
         >
           <div className="hero-title">
@@ -73,8 +76,9 @@ const Hero = () => {
 
           <div className="row" id="hero-subDescription">
             <p className="col col-6">
-              Highly skilled at progressive enhancement, design systems &amp;
-              Software Engineering.
+              With a Bachelor's in Computer Engineering, I possess strong
+              problem-solving skills, attention to detail, and proficiency in
+              modern programming languages.
             </p>
             <p className="col col-6">
               {/* Demonstrated success in delivering impactful products for clients,
@@ -84,6 +88,25 @@ const Hero = () => {
               startups, and businesses, with collaborative teamwork when
               necessary.
             </p>
+          </div>
+          {/* floating label */}
+          <div className="floating-label code">
+            <IoCodeSlashOutline
+              style={{ width: "16px", height: "16px", marginRight: "4.98px" }}
+            />{" "}
+            Code
+          </div>
+          <div className="floating-label learn">
+            <RiBookLine
+              style={{ width: "16px", height: "16px", marginRight: "4.98px" }}
+            />{" "}
+            Learn
+          </div>
+          <div className="floating-label write">
+            <HiOutlinePencilSquare
+              style={{ width: "16px", height: "16px", marginRight: "4.98px" }}
+            />{" "}
+            Write
           </div>
         </div>
         <div className="col col-12 col-lg-5">
