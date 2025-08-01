@@ -14,9 +14,9 @@ const WhatPeopleSay = ({ testimonials }) => {
           secHead2="What people say"
           secDesc={
             <>
-              Lorem ipsum dolor sit amet consectetur. Varius blandit
-              <br />
-              facilisis egestas nulla tristique viverra
+              What collaborators and teammates say about building real-world
+              <br className="d-none d-lg-block" /> software projects together
+              with me
             </>
           }
         />

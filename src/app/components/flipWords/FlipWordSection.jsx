@@ -16,8 +16,8 @@ const FlipWordSection = () => {
         <p>softwares with me</p>
       </div>
       <p className="flip-desc">
-        Lorem ipsum ilisis egestas nulla tristique viverra in. Sit amet
-        consectetur. Varius blandit facilisis egestas
+        Let’s turn bold ideas into delightful, user-friendly software that
+        people truly love to use.
       </p>
     </>
   );

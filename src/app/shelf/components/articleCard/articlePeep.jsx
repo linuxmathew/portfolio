@@ -6,7 +6,7 @@ const ArticlePeep = ({ article }) => {
   const { publishedAt, readTime, title, tip, excerpt, image, slug } = article;
 
   const date = new Date(publishedAt).toISOString().split("T")[0];
-  console.log("article", article);
+  // console.log("article", article);
 
   return (
     <Link

@@ -47,7 +47,7 @@ export const InfiniteMovingCards = ({
     >
       <ul
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap py-4 list-none animate-scroll",
+          "flex w-max min-w-full shrink-0 flex-nowrap py-3 list-none animate-scroll",
           "mb-0",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}

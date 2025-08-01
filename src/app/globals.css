@@ -41,6 +41,7 @@ body {
   --testimonial-text: #e3f1f4;
 
   --main-border-divider: #aaaadd;
+  --floating-icon-color: #86869b;
 }
 
 [data-theme="dark"] {
@@ -65,6 +66,7 @@ body {
   --testimonial-text: #dfdfed;
 
   --main-border-divider: #5d5d78;
+  --floating-icon-color: #c6c6d7;
 }
 
 @theme inline {

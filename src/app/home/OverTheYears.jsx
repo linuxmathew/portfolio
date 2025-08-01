@@ -25,7 +25,7 @@ const OverTheYears = () => {
             serves people. It wasn’t glamorous, but it was the bedrock that
             shaped my problem-solving mindset. */}
             My journey began at NBTS, where I took on a hands-on role in network
-            infrastructure—configuring systems, solving real problems, and
+            infrastructure: configuring systems, solving real problems, and
             learning how tech meets everyday needs. It wasn’t flashy, but it
             taught me the value of solid groundwork and practical thinking.
           </p>
@@ -37,7 +37,7 @@ const OverTheYears = () => {
             from just writing functional code to creating meaningful solutions.
             Every feature shipped felt like a small victory for usability and
             efficiency. */}
-            At ResearchGains, I stepped into more responsibility—leading
+            At ResearchGains, I stepped into more responsibility: leading
             frontend efforts, streamlining workflows, and shipping features that
             made a real difference. It was here I learned that great code isn’t
             just functional; it’s thoughtful and user-focused.

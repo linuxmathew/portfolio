@@ -27,11 +27,137 @@
   margin-bottom: 1.56rem;
 }
 
+.hero {
+  position: relative;
+}
+
+/* Floating Labels */
+.floating-label {
+  position: absolute;
+  font-size: 12px;
+  border: 1px solid var(--text-color-neutral-border);
+  padding: 3px 8px;
+  border-radius: 36px;
+  color: var(--floating-icon-color);
+  font-weight: var(--font-weight-regular);
+}
+
+.code {
+  top: -5%;
+  right: 27%;
+  transform: rotate(-20.21deg);
+}
+
+.learn {
+  top: 33%;
+  left: 45%;
+  transform: rotate(-20.21deg);
+}
+
+.write {
+  top: 37%;
+  right: 20%;
+  transform: rotate(20.21deg);
+}
+
+/* .floating-label {
+  animation: float 4s ease-in-out infinite;
+} */
+
+/* @keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+} */
+
 /* medium screen */
-@media (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 768px) {
+  /* @media (max-width: 768px) { */
   .hero-title {
     font-size: 3rem;
     line-height: 65.4px;
+  }
+  .hero {
+    /* padding-top: 2rem; */
+    padding-bottom: 3rem;
+  }
+  #hero-subDescription {
+    display: none;
+  }
+
+  .code {
+    top: -6%;
+    right: 29%;
+  }
+
+  .learn {
+    top: 50%;
+    left: 45%;
+  }
+
+  .write {
+    top: 55%;
+    right: 20%;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 599px) {
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 45.4px;
+  }
+  .hero {
+    /* padding: 2rem; */
+    padding-bottom: 3rem;
+  }
+  #hero-subDescription {
+    display: none;
+  }
+
+  .code {
+    top: -10%;
+    right: 29%;
+  }
+
+  .learn {
+    top: 50%;
+    left: 53%;
+  }
+
+  .write {
+    top: 55%;
+    right: 10%;
+  }
+}
+@media (min-width: 421px) and (max-width: 489px) {
+  .hero-title {
+    font-size: 2.4rem;
+    line-height: 39.6px;
+  }
+  .hero {
+    padding-bottom: 3rem;
+  }
+  #hero-subDescription {
+    display: none;
+  }
+
+  .code {
+    top: -12%;
+    right: 29%;
+  }
+
+  .learn {
+    top: 50%;
+    left: 53%;
+  }
+
+  .write {
+    top: 55%;
+    right: 10%;
   }
 }
 
@@ -40,6 +166,9 @@
   .hero-wrapper {
     margin-top: 6.5rem;
     padding-bottom: 2.5rem;
+  }
+  .hero {
+    padding-top: 2rem;
   }
   .hero-title {
     font-size: 2.25rem;
@@ -51,5 +180,20 @@
   }
   .button-wrapper {
     margin-bottom: 3rem;
+  }
+
+  .code {
+    top: -1%;
+    right: 23%;
+  }
+
+  .learn {
+    top: 65%;
+    left: 60%;
+  }
+
+  .write {
+    top: 40%;
+    right: 10%;
   }
 }

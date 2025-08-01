@@ -1,10 +1,13 @@
+"use client";
 import React from "react";
 import "./ContactMeForm.css";
 import UniversalBtn from "../buttons/UniversalBtn";
-
 import { FiArrowUpRight } from "react-icons/fi";
+import { useContactMe } from "../../home/hooks/useContactMeForm";
 
 const ContactMeForm = () => {
+  const { formData, handleFormChange } = useContactMe();
+
   return (
     <div className="container-md" style={{}}>
       <div className="mx-auto d-flex justify-content-center ">
@@ -22,10 +25,13 @@ const ContactMeForm = () => {
                 Your Name
               </label>
               <input
-                type="email"
+                type="text"
+                name="name"
+                value={formData.name}
                 className="form-input form-control"
                 id="exampleFormControlInput1"
                 placeholder="name@example.com"
+                onChange={handleFormChange}
               />
             </div>
             <div className="form-group ">
