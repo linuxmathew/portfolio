@@ -8,16 +8,13 @@ export const useContactMe = () => {
   });
 
   const handleFormChange = (e) => {
-    const text = e.target.value;
-
-    console.log("colose", text);
-    return;
-    const form = [...formData];
-    const change = form[val];
-    change = text;
-    form[val] = change;
-    setFormData(form);
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  return { handleFormChange, formData };
+  const handleContactSubmit = () => {
+    console.log("Form submitted with data:", formData);
+  };
+
+  return { handleFormChange, formData, handleContactSubmit };
 };

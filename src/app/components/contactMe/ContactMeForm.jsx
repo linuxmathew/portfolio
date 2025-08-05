@@ -6,7 +6,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useContactMe } from "../../home/hooks/useContactMeForm";
 
 const ContactMeForm = () => {
-  const { formData, handleFormChange } = useContactMe();
+  const { formData, handleFormChange, handleContactSubmit } = useContactMe();
 
   return (
     <div className="container-md" style={{}}>
@@ -42,10 +42,13 @@ const ContactMeForm = () => {
                 Email
               </label>
               <input
+                value={formData.email}
+                name="email"
                 type="email"
                 className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="name@example.com"
+                onChange={handleFormChange}
               />
             </div>
           </div>
@@ -58,6 +61,10 @@ const ContactMeForm = () => {
               Your Message
             </label>
             <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleFormChange}
+              placeholder="Write your message here"
               className="text-area-form form-control"
               id="exampleFormControlTextarea1"
               style={{
@@ -70,7 +77,7 @@ const ContactMeForm = () => {
             ></textarea>
           </div>
           <div className="text-center" style={{ marginTop: "4rem" }}>
-            <UniversalBtn fadeBorder>
+            <UniversalBtn fadeBorder onClick={handleContactSubmit}>
               Send away{" "}
               <FiArrowUpRight
                 className=""
