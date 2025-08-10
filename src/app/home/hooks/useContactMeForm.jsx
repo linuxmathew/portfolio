@@ -11,7 +11,6 @@ export const useContactMe = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
   const handleContactSubmit = () => {
     console.log("Form submitted with data:", formData);
   };
