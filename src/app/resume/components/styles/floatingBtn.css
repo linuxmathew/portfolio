@@ -1,3 +1,23 @@
+/* Bounce keyframes */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  40% {
+    transform: translateY(-10px);
+    background-color: rgba(0, 123, 255, 0.25); /* highlight on bounce */
+  }
+  60% {
+    transform: translateY(-5px);
+    background-color: rgba(0, 123, 255, 0.15);
+  }
+}
+
 .floatBtn {
   position: fixed;
   top: 15%;
@@ -11,9 +31,16 @@
   cursor: pointer;
   /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); */
   z-index: 1000;
+
+  /* 👇 make it bounce until hover */
+  animation: bounce 2s infinite;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .floatBtn:hover {
+  /* 👇 stop bouncing + keep solid background */
+  animation: none;
+  transform: translateY(0);
   background-color: var(--primary-color);
   color: var(--default-white);
   border-color: var(--secondary-color);
