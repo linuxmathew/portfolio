@@ -4,9 +4,11 @@ import "./ContactMeForm.css";
 import UniversalBtn from "../buttons/UniversalBtn";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useContactMe } from "../../home/hooks/useContactMeForm";
+import TextField from "@mui/material/TextField";
 
 const ContactMeForm = () => {
-  const { formData, handleFormChange, handleContactSubmit } = useContactMe();
+  const { loading, formData, handleFormChange, handleContactSubmit } =
+    useContactMe();
 
   return (
     <div className="container-md" style={{}}>
@@ -18,7 +20,7 @@ const ContactMeForm = () => {
           </p>
           <div className="flex-wrapper d-flex justify-content-between">
             <div className="form-group ">
-              <label
+              {/* <label
                 style={{ color: "#86869B" }}
                 htmlFor="exampleFormControlInput1"
               >
@@ -32,6 +34,39 @@ const ContactMeForm = () => {
                 id="exampleFormControlInput1"
                 placeholder="name@example.com"
                 onChange={handleFormChange}
+              /> */}
+              {/* make the textfield white */}
+              <TextField
+                style={{ width: "100%" }}
+                id="standard-basic"
+                label="Your Name"
+                variant="standard"
+                value={formData.name}
+                name="name"
+                onChange={handleFormChange}
+                sx={{
+                  input: { color: "#F0F0FA" }, // text color
+                  label: { color: "#86869B" }, // default label color
+                  "& label.Mui-focused": { color: "#86869B" }, // focused label color
+                  "& .MuiInput-underline:before": {
+                    borderBottomColor: "#C6C6D7", // default underline
+                  },
+                  "& .MuiInput-underline:hover:before": {
+                    borderBottomColor: "#C6C6D7", // hover underline
+                  },
+                  "& .MuiInput-underline:after": {
+                    borderBottomColor: "#C6C6D7", // focused underline
+                  },
+                  /* 👇 add extra spacing between label and underline */
+                  /* 👇 add extra spacing between label and underline */
+                  "& .MuiInputLabel-root": {
+                    transform: "translate(0, 8px) scale(1)", // default is ~16px
+                  },
+                  "& .MuiInputLabel-shrink": {
+                    transform: "translate(0, 1.5px) scale(0.75)", // keep focus state normal
+                  },
+                }}
+                // {...props}
               />
             </div>
             <div className="form-group ">
@@ -76,13 +111,23 @@ const ContactMeForm = () => {
               // rows="3"
             ></textarea>
           </div>
+          <div className="alert alert-primary mt-5" role="alert">
+            🚀 Message sent! I’ll reply quicker than you can say “JavaScript!”
+            😄
+          </div>
           <div className="text-center" style={{ marginTop: "4rem" }}>
             <UniversalBtn fadeBorder onClick={handleContactSubmit}>
               Send away{" "}
-              <FiArrowUpRight
-                className=""
-                style={{ height: "24x", width: "24px" }}
-              />
+              {loading ? (
+                <div className="spinner-grow spinner-grow-sm" role="status">
+                  {/* <span class="sr-only">Loading...</span> */}
+                </div>
+              ) : (
+                <FiArrowUpRight
+                  className=""
+                  style={{ height: "24x", width: "24px" }}
+                />
+              )}
             </UniversalBtn>
           </div>
         </div>
