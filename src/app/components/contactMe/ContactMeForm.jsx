@@ -38,7 +38,7 @@ const ContactMeForm = () => {
             </div>
             <div className="form-group mt-5 mt-md-0">
               <CustomInput
-                label="Email"
+                label="Email address"
                 name="email"
                 value={formData.email}
                 onChange={handleFormChange}

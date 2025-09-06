@@ -11,6 +11,9 @@ const CustomInput = ({
   required = false,
   ...props
 }) => {
+  // define a soft error color once
+  const softErrorColor = "#ff7b7b";
+
   return (
     <TextField
       style={{ width: "100%" }}
@@ -21,30 +24,44 @@ const CustomInput = ({
       name={name}
       onChange={onChange}
       required={required}
-      error={!!error} // MUI shows red underline if true
+      error={!!error}
       helperText={error ? helperText : ""}
       sx={{
-        input: { color: "#F0F0FA" }, // text color
+        input: { color: "#F0F0FA" },
         textarea: { color: "#F0F0FA" },
-        label: { color: "#86869B" }, // default label color
-        "& label.Mui-focused": { color: "#86869B" }, // focused label color
+
+        // Label stays gray always
+        label: { color: "#86869B" },
+        "& label.Mui-focused": { color: "#86869B" },
+        "& label.Mui-error": { color: "#86869B" },
+
         // Underline
         "& .MuiInput-underline:before": {
-          borderBottomColor: error ? "red" : "#F0F0FA",
+          borderBottomColor: error ? softErrorColor : "#F0F0FA",
         },
         "& .MuiInput-underline:hover:before": {
-          borderBottomColor: "#C6C6D7 !important", // hover underline
+          borderBottomColor: error ? softErrorColor : "#C6C6D7",
         },
         "& .MuiInput-underline:after": {
-          borderBottomColor: "#C6C6D7", // focused underline
+          borderBottomColor: error ? softErrorColor : "#C6C6D7",
         },
-        /* 👇 add extra spacing between label and underline */
-        /* 👇 add extra spacing between label and underline */
+
+        // Make sure error state underline matches too
+        "& .Mui-error:before, & .Mui-error:after": {
+          borderBottomColor: `${softErrorColor} !important`,
+        },
+
+        // Helper text in soft red
+        "& .MuiFormHelperText-root.Mui-error": {
+          color: softErrorColor,
+        },
+
+        // Label spacing tweak
         "& .MuiInputLabel-root": {
-          transform: "translate(0, 8px) scale(1)", // default is ~16px
+          transform: "translate(0, 8px) scale(1)",
         },
         "& .MuiInputLabel-shrink": {
-          transform: "translate(0, 1.5px) scale(0.75)", // keep focus state normal
+          transform: "translate(0, 1.5px) scale(0.75)",
         },
       }}
       {...props}
