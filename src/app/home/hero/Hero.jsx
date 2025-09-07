@@ -38,7 +38,10 @@ const Hero = () => {
         >
           <div className="hero-title">
             Hi, I’m{" "}
-            <span style={{ color: "var(--primary-color)" }}>Temitayo</span>,{" "}
+            <span style={{ color: "var(--new-icon-title-blue)" }}>
+              Temitayo
+            </span>
+            ,{" "}
             <div className="d-flex py-0">
               a
               <TypewriterEffectSmooth

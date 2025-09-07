@@ -42,6 +42,7 @@ body {
 
   --main-border-divider: #aaaadd;
   --floating-icon-color: #86869b;
+  --new-icon-title-blue: #3030d4;
 }
 
 [data-theme="dark"] {
@@ -67,6 +68,7 @@ body {
 
   --main-border-divider: #5d5d78;
   --floating-icon-color: #c6c6d7;
+  --new-icon-title-blue: #7373fd;
 }
 
 @theme inline {
