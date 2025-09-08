@@ -43,7 +43,7 @@
 }
 
 .carousel__dot--active {
-  background-color: #3535e0; /* Active: vibrant blue */
+  background-color: var(--new-icon-title-blue); /* Active: vibrant blue */
 }
 
 .carousel__dot:focus {
