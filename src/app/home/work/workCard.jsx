@@ -10,7 +10,7 @@ const WorkCard = ({ image, title, slug, desc, addLink }) => {
         className="relative group"
         style={{
           padding: "30px",
-          backgroundColor: "#13132F",
+          backgroundColor: "var(--testimonial-bg-border)",
           borderRadius: "24px",
           overflow: "hidden", // Ensure content stays within rounded borders
           marginBottom: "24px",
