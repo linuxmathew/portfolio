@@ -30,7 +30,7 @@ body {
   --primary-color: #377dff;
   --shoot-up-arrow: #5d5d78;
   /* --primary-color: #2a2ac7; */
-  --icon-color: #2a2ac7;
+  --icon-color: #3030d4;
   --secondary-color: #eaeaea;
   --resume-headline: #13132f;
   --flip-word-body: #5d5d78;
@@ -49,12 +49,12 @@ body {
   /* same purpose as in non dark mode above */
   --default-white: #e3f1f4;
 
-  --bg-color: #141c2f;
+  --bg-color: #12122b;
   --text-color: #fdfdff;
   --text-color-neutral: #ececec;
   --text-color-neutral-border: #a8a8bd;
   --primary-color: #377dff;
-  --icon-color: #2a2ac7;
+  --icon-color: #7373fd;
   --secondary-color: #333333;
 
   --shoot-up-arrow: #fdfdff;
