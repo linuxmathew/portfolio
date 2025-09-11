@@ -14,6 +14,13 @@ const nextConfig: NextConfig = {
     // Optional: For Next.js 12 or mixed environments
     domains: ["cdn.sanity.io"],
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
 };
 
 export default nextConfig;

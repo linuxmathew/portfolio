@@ -9,6 +9,8 @@ import UniversalBtn from "./buttons/UniversalBtn";
 import React from "react";
 import { IoMdClose } from "react-icons/io";
 import { HiMenuAlt3 } from "react-icons/hi";
+import Logo_Dark from "@/assets/logo_dark.svg";
+import Logo_Light from "@/assets/logo_light.svg";
 
 export default React.memo(function Navbar() {
   const [theme, setTheme] = useState("light");
@@ -47,15 +49,7 @@ export default React.memo(function Navbar() {
       <div className="container-md">
         <div className="navbar-logo">
           <Link href="/">
-            <Image
-              className="logo-img"
-              src={
-                theme === "light" ? "/images/logo.svg" : "/images/logo_dark.svg"
-              }
-              alt="Logo"
-              width={50}
-              height={50}
-            />
+            {theme === "light" ? <Logo_Dark /> : <Logo_Light />}
           </Link>
         </div>
 

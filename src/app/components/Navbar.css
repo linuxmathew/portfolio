@@ -23,10 +23,27 @@
 /* Logo image styles */
 .logo-img {
   width: 100%;
-  max-width: 150px; /* Default size for larger screens */
+  max-width: 96.19px; /* Default size for larger screens */
   height: auto; /* Maintain aspect ratio */
   transition: width 0.3s ease; /* Smooth resizing */
+  color: var(--text-color);
+  stroke: var(--text-color);
 }
+
+.logo-img .underscore {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.logo-img .underscore {
+  fill: red; /* just to test */
+}
+
 /* Actions (Theme Toggle + Contact Button) */
 .navbar-actions {
   display: flex;
