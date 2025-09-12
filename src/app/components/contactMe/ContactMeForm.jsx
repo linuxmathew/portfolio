@@ -69,7 +69,11 @@ const ContactMeForm = () => {
           )}
 
           <div className="text-center" style={{ marginTop: "4rem" }}>
-            <UniversalBtn fadeBorder onClick={handleContactSubmit}>
+            <UniversalBtn
+              type="footer"
+              fadeBorder
+              onClick={handleContactSubmit}
+            >
               Send away{" "}
               {loading ? (
                 <div className="spinner-grow spinner-grow-sm" role="status">

@@ -8,7 +8,7 @@ const UniversalBtn = ({
   fadeBorder = "",
 }) => {
   const className = `${styles["universal-btn"]} ${
-    type === "primary" ? styles.primary : ""
+    type === "primary" ? styles.primary : type === "footer" ? styles.footer : ""
   }`;
 
   return (

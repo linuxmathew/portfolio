@@ -4,6 +4,7 @@ import * as FaIcons from "react-icons/fa";
 import * as IoIcons from "react-icons/io";
 import * as SiIcons from "react-icons/si";
 import * as TiIcons from "react-icons/ti";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const iconMap = {
   BiSolidFileCss: BiIcons.BiSolidFileCss,
@@ -18,6 +19,7 @@ const iconMap = {
   SiC: SiIcons.SiC,
   SiElectron: SiIcons.SiElectron,
   SiSanity: SiIcons.SiSanity,
+  TbBrandNextjs: TbBrandNextjs,
 };
 const TechTool = ({ tool }) => {
   const IconComponent = iconMap[tool.iconName];

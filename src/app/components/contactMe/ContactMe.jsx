@@ -1,5 +1,6 @@
 import React from "react";
 import ContactMeForm from "./ContactMeForm";
+import SectionDivider from "../SectionDivider";
 
 const ContactMeFooter = () => {
   return (
@@ -13,6 +14,8 @@ const ContactMeFooter = () => {
       }}
     >
       <ContactMeForm />
+      <SectionDivider isDefault />
+      <div className="mb-5"></div>
     </div>
   );
 };

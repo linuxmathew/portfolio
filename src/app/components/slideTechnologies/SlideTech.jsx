@@ -5,18 +5,19 @@ import TechTool from "./techTool";
 
 const SlideTech = () => {
   const arr = [
-    { tool: "CSS", iconName: "BiSolidFileCss" },
-    { tool: "python", iconName: "FaPython" },
+    // { tool: "CSS", iconName: "BiSolidFileCss" },
+    { tool: "Python", iconName: "FaPython" },
     { tool: "Javascript", iconName: "IoLogoJavascript" },
     { tool: "Flask", iconName: "SiFlask" },
     { tool: "NodeJs", iconName: "FaNodeJs" },
     { tool: "Bootstrap", iconName: "SiBootstrap" },
     { tool: "ReactJs", iconName: "FaReact" },
-    { tool: "HTML", iconName: "TiHtml5" },
-    { tool: "CMS", iconName: "BiSolidBookContent" },
-    { tool: "C program", iconName: "SiC" },
+    // { tool: "HTML", iconName: "TiHtml5" },
+    // { tool: "CMS", iconName: "BiSolidBookContent" },
+    { tool: "C", iconName: "SiC" },
     { tool: "ElectronJs", iconName: "SiElectron" },
     { tool: "Sanity", iconName: "SiSanity" },
+    { tool: "NextJs", iconName: "TbBrandNextjs" },
   ];
   return (
     <div

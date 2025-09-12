@@ -10,14 +10,14 @@ import ContentHead from "./components/header/ContentHead";
 import CoreTech from "./components/coreTech/CoreTech";
 import EducationSection from "./components/education/education";
 import ExperienceWork from "./components/experience/ExperienceWork";
-import {
-  coreTechArr,
-  eduArr,
-  experienceArr,
-} from "../../../public/data/resumeData";
+import { coreTechArr, eduArr } from "../../../public/data/resumeData";
 import Link from "next/link";
 import FloatingButton from "./components/floatingBtn";
 import { getResumeData } from "./services/fetchResumeData";
+import Graduation from "@/assets/graduation-hat.svg";
+import CodeSquare from "@/assets/code-square.svg";
+import Briefcase from "@/assets/briefcase-02.svg";
+import TerminalBrowser from "@/assets/terminal-browser.svg";
 
 const Resume = async () => {
   const resume = await getResumeData();
@@ -44,10 +44,7 @@ const Resume = async () => {
           </div>
           <ResumeDivider />
           <div className="container-md infoSection">
-            <ContentHead
-              icon="/images/code-square.svg"
-              title="Core Technologies"
-            />
+            <ContentHead icon={CodeSquare} title="Core Technologies" />
             <div className="row" style={{}}>
               {coreTechArr.map((arr, index) => (
                 <CoreTech skill={arr} key={index} />
@@ -56,7 +53,7 @@ const Resume = async () => {
           </div>
           <ResumeDivider />
           <div className="container-md infoSection">
-            <ContentHead icon="/images/graduation-hat.svg" title="Education" />
+            <ContentHead icon={Graduation} title="Education" />
             {eduArr.map((edu, index) => (
               <EducationSection
                 key={index}
@@ -71,7 +68,7 @@ const Resume = async () => {
           <Headline title={title} description={desc} />
           <ResumeDivider />
           <div className=" headline container-md ">
-            <ContentHead icon="/images/briefcase-02.svg" title="Experience" />
+            <ContentHead icon={Briefcase} title="Experience" />
             {experiences.map((exp, index) => (
               <ExperienceWork
                 key={index}
@@ -83,11 +80,17 @@ const Resume = async () => {
               />
             ))}
 
-            <ContentHead icon="/images/terminal-browser.svg" title="Projects" />
+            <ContentHead icon={TerminalBrowser} title="Projects" />
             <p className="projectDesc">
               Links to some of my work can be found on{" "}
-              <Link href="/work">temitayoh.dev/work</Link> and details can be
-              provided upon request via a scheduled demo call.
+              <Link
+                href="/work"
+                style={{ color: "var( --new-icon-title-blue)" }}
+              >
+                temitayo.me/work
+              </Link>{" "}
+              and details can be provided upon request via a scheduled demo
+              call.
             </p>
           </div>
         </div>
